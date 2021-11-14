@@ -1,0 +1,16 @@
+<!-- mat-toolbar faz parte do material -->
+<mat-toolbar color="" class="cabecalho mat-elevation-z2"> <!-- mat-elevation-z2 é uma classe do material para elevação -->
+    <span>
+        <a routerLink="/">
+            <img class="logo" src="assets/img/nerd2.png" alt="logo">
+        </a>
+    </span>
+    <span class="grupo-titulo">
+        <a routerLink="{{ routeURL }}">
+            <i class="material-icons">
+                {{ icon }}       <!-- Nome do icon em inglês que aparece no front -->
+            </i>
+            {{ title }}
+        </a>
+    </span>
+</mat-toolbar>

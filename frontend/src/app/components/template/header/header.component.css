@@ -1,0 +1,23 @@
+.cabecalho {
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.cabecalho .logo {  /*Somente quem tem a classe .cabecalho e a clase .logo vai recer isso*/
+    max-height: 55px;
+}
+
+.cabecalho .grupo-titulo {
+    padding-left: 25px;
+}
+
+.cabecalho .grupo-titulo i {  /* Será aplicado na tag i (icon) */
+    padding-right: 5px;
+}

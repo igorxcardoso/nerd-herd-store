@@ -1,0 +1,16 @@
+.footer {
+    position: fixed;
+    bottom: 0;    /* Vai usar a parte de baixo da tela como referência*/
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer span{
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.footer i {  /* Será aplicado na tag i (icon) */
+    padding-left: 20px;
+}

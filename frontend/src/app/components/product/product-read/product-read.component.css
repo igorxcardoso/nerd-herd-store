@@ -1,0 +1,17 @@
+table {
+    width: 100%;
+}
+
+.edit {
+    margin-right: 15px;
+}
+
+/* Vai pegar o i dentro da tag a */
+.edit > i {
+    color: #0c3dc2;
+}
+
+/* Vai pegar o i dentro da tag a */
+.delete > i {
+    color: #e35e6b;
+}

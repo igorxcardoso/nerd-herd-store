@@ -1,0 +1,16 @@
+form {
+    display: flex;
+    flex-direction: column; /* Vai deixar um debaixo do outro */
+    margin-top: 20px;
+}
+
+button {
+    /* margin: 20px 20px 0px 0px; */
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.mybutton-salvar {
+    background-color: #d42222;
+    color: aliceblue;
+}

@@ -1,0 +1,27 @@
+<mat-sidenav-container class="container">
+    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="/">
+                <i class="material-icons">
+                    home <!-- Nome do icon que aparece -->
+                </i>
+                Início
+            </a>
+            <a mat-list-item routerLink="/produtos">
+                <i class="material-icons">
+                    storefront <!-- Nome do icon que aparece -->
+                </i>
+                Produtos
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="content"> <!-- O sidenav vai navegar e alterar o que está dentro da tag -->
+        
+        <!-- Sistema de rotas que foi importado no incio do projeto. 
+            É o ponto que será substituido as telas de navegação. 
+            Elemento que será substituido sempre houver uma navegação. -->
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
