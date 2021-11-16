@@ -35,7 +35,7 @@ export class ProductService {
 	
 	// Observable do tipo Product. Responsável por guardar os produtos. Requisição HTTP do tipo POST ao Backend.
 	create(produto: Product): Observable<Product> { 
-		return this.http.post<Product>(this.URL_POST, {produto}).pipe(
+		return this.http.post<Product>(this.URL_POST, {produto}).pipe(	// Esta Passando um JSON Serializado
 			map((obj) => obj),
 			catchError((myErro) => this.errorHandler(myErro))
 			
