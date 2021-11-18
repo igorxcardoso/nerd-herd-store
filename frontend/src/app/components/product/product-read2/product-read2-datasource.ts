@@ -38,26 +38,26 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 
 
 const EXAMPLE_DATA: Product[] = [
-	{ id: 1, name: 'Hydrogen', price: '10.89' },
-	{ id: 2, name: 'Helium', price: '10.89' },
-	{ id: 3, name: 'Lithium', price: '10.89' },
-	{ id: 4, name: 'Beryllium', price: '10.89' },
-	{ id: 5, name: 'Boron', price: '10.89' },
-	{ id: 6, name: 'Carbon', price: '10.89' },
-	{ id: 7, name: 'Nitrogen', price: '10.89' },
-	{ id: 8, name: 'Oxygen', price: '10.89' },
-	{ id: 9, name: 'Fluorine', price: '10.89' },
-	{ id: 10, name: 'Neon', price: '10.89' },
-	{ id: 11, name: 'Sodium', price: '10.89' },
-	{ id: 12, name: 'Magnesium', price: '10.89' },
-	{ id: 13, name: 'Aluminum', price: '10.89' },
-	{ id: 14, name: 'Silicon', price: '10.89' },
-	{ id: 15, name: 'Phosphorus', price: '10.89' },
-	{ id: 16, name: 'Sulfur', price: '10.89' },
-	{ id: 17, name: 'Chlorine', price: '10.89' },
-	{ id: 18, name: 'Argon', price: '10.89' },
-	{ id: 19, name: 'Potassium', price: '10.89' },
-	{ id: 20, name: 'Calcium', price: '10.89' },
+	{ id: 1, title: 'Hydrogen', price: '10.89' },
+	{ id: 2, title: 'Helium', price: '10.89' },
+	{ id: 3, title: 'Lithium', price: '10.89' },
+	{ id: 4, title: 'Beryllium', price: '10.89' },
+	{ id: 5, title: 'Boron', price: '10.89' },
+	{ id: 6, title: 'Carbon', price: '10.89' },
+	{ id: 7, title: 'Nitrogen', price: '10.89' },
+	{ id: 8, title: 'Oxygen', price: '10.89' },
+	{ id: 9, title: 'Fluorine', price: '10.89' },
+	{ id: 10, title: 'Neon', price: '10.89' },
+	{ id: 11, title: 'Sodium', price: '10.89' },
+	{ id: 12, title: 'Magnesium', price: '10.89' },
+	{ id: 13, title: 'Aluminum', price: '10.89' },
+	{ id: 14, title: 'Silicon', price: '10.89' },
+	{ id: 15, title: 'Phosphorus', price: '10.89' },
+	{ id: 16, title: 'Sulfur', price: '10.89' },
+	{ id: 17, title: 'Chlorine', price: '10.89' },
+	{ id: 18, title: 'Argon', price: '10.89' },
+	{ id: 19, title: 'Potassium', price: '10.89' },
+	{ id: 20, title: 'Calcium', price: '10.89' },
 ];
 
 
@@ -124,7 +124,7 @@ export class ProductRead2DataSource extends DataSource<Product> {
 		return data.sort((a, b) => {
 			const isAsc = this.sort?.direction === 'asc';
 			switch (this.sort?.active) {
-				case 'name': return compare(a.name, b.name, isAsc);
+				case 'name': return compare(a.title, b.title, isAsc);
 				// case 'id': return compare(+a.id, +b.id, isAsc);
 				default: return 0;
 			}
