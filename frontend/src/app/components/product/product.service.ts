@@ -13,9 +13,7 @@ import { catchError, map } from 'rxjs/operators';
     providedIn: 'root'
 })
 export class ProductService {
-    private URL_POST: string = "http://localhost:3000/products";
-    private URL_GET: string = "http://localhost:3000/products";
-    private URL_DELETE: string = "http://localhost:3000/products";
+    private URL_PRODUCT: string = "http://localhost:3000/products";
 
     constructor(private snackBar: MatSnackBar,
         private http: HttpClient) { }
@@ -30,23 +28,23 @@ export class ProductService {
     }
 
     create(produto: Product): Observable<Product> {
-        return this.http.post<Product>(this.URL_POST, { produto }).pipe(
+        return this.http.post<Product>(this.URL_PRODUCT, { produto }).pipe(
             map((obj) => obj),
             catchError((myErro) => this.errorHandler(myErro))
         );
     }
 
     read(): Observable<Product[]> {
-        return this.http.get<Product[]>(this.URL_GET);
+        return this.http.get<Product[]>(this.URL_PRODUCT);
     }
 
     readByid(id: any): Observable<Product> {
-        const url = `${this.URL_GET}/${id}`;
+        const url = `${this.URL_PRODUCT}/${id}`;
         return this.http.get<Product>(url);
     }
 
     update(product: Product): Observable<Product> {
-        const url = `${this.URL_GET}/${product.id}`;
+        const url = `${this.URL_PRODUCT}/${product.id}`;
         return this.http.put<Product>(url, product).pipe(
             map((obj) => obj),
             catchError((myErro) => this.errorHandler(myErro))
@@ -54,7 +52,7 @@ export class ProductService {
     }
 
     delete(id: any): Observable<Product> {
-        const url = `${this.URL_DELETE}/${id}`;
+        const url = `${this.URL_PRODUCT}/${id}`;
         return this.http.delete<Product>(url).pipe(
             map((obj) => obj),
             catchError((myErro) => this.errorHandler(myErro))
