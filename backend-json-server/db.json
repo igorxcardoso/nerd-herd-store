@@ -1,39 +1,34 @@
 {
-  "produtos": [
+  "products": [
     {
-      "name": "Notebook Acer 16 GB",
+      "title": "Notebook Acer 16 GB",
       "price": "1985.32",
       "id": 1
     },
     {
-      "name": "iPhone 13 64GB Petro",
+      "title": "iPhone 13 64GB Petro",
       "price": "2500.00",
       "id": 2
     },
     {
-      "name": "Copo de plático",
+      "title": "Copo de plático",
       "price": "29.9",
       "id": 3
     },
     {
-      "name": "PC quebrado",
+      "title": "PC quebrado",
       "price": "552.91",
       "id": 4
     },
     {
-      "name": "Notebook i5 8GB 14'",
+      "title": "Notebook i5 8GB 14'",
       "price": "1782.99",
       "id": 5
     },
     {
-      "name": "CD antigo (Não funciona)",
+      "title": "CD novo (Não funciona)",
       "price": "0.352",
       "id": 6
-    },
-    {
-      "name": "Meia Branca Par",
-      "price": "2.99",
-      "id": 7
     }
   ],
   "usuario": [
