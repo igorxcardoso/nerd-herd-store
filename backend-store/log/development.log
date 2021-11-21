@@ -4376,3 +4376,295 @@ Processing by ProductsController#findByid as HTML
 Completed 202 Accepted in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms | Allocations: 810)
 
 
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from <main> at /home/igor/Projects/My_Projects/nerd-herd-store/backend-store/bin/rake:9)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "S3 Novo 16GB"], ["price", 52.89], ["created_at", "2021-11-21 18:40:13.515518"], ["updated_at", "2021-11-21 18:40:13.515518"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Garrafa 1L"], ["price", 32.9], ["created_at", "2021-11-21 18:40:13.525125"], ["updated_at", "2021-11-21 18:40:13.525125"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "TV LED ‘23"], ["price", 21.0], ["created_at", "2021-11-21 18:40:13.529952"], ["updated_at", "2021-11-21 18:40:13.529952"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Bikw Aro 20"], ["price", 9.01], ["created_at", "2021-11-21 18:40:13.534478"], ["updated_at", "2021-11-21 18:40:13.534478"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Tênis Nike 12M"], ["price", 21.91], ["created_at", "2021-11-21 18:40:13.539035"], ["updated_at", "2021-11-21 18:40:13.539035"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Copo de vidro"], ["price", 0.92], ["created_at", "2021-11-21 18:40:13.543382"], ["updated_at", "2021-11-21 18:40:13.543382"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+Started GET "/products" for ::1 at 2021-11-21 15:40:23 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.42ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.7ms | Allocations: 8261)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[36mProduct Destroy (0.1ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 3]]
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[36mProduct Destroy (0.1ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 4]]
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[36mProduct Destroy (0.1ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 5]]
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 6]]
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[36mProduct Destroy (0.1ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 7]]
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 8]]
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 12]]
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 13]]
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 14]]
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 15]]
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 16]]
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 17]]
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ lib/tasks/delete_data.rake:5:in `block (2 levels) in <main>'
+Started GET "/products" for ::1 at 2021-11-21 15:47:21 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.6ms | Allocations: 2593)
+
+
+Started GET "/products" for ::1 at 2021-11-21 15:47:22 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 962)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "S3 Novo 16GB"], ["price", 52.89], ["created_at", "2021-11-21 18:48:37.474453"], ["updated_at", "2021-11-21 18:48:37.474453"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Garrafa 1L"], ["price", 32.9], ["created_at", "2021-11-21 18:48:37.488309"], ["updated_at", "2021-11-21 18:48:37.488309"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "TV LED ‘23"], ["price", 21.0], ["created_at", "2021-11-21 18:48:37.493120"], ["updated_at", "2021-11-21 18:48:37.493120"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Bikw Aro 20"], ["price", 9.01], ["created_at", "2021-11-21 18:48:37.498813"], ["updated_at", "2021-11-21 18:48:37.498813"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Tênis Nike 12M"], ["price", 21.91], ["created_at", "2021-11-21 18:48:37.504649"], ["updated_at", "2021-11-21 18:48:37.504649"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Copo de vidro"], ["price", 0.92], ["created_at", "2021-11-21 18:48:37.512177"], ["updated_at", "2021-11-21 18:48:37.512177"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+Started GET "/products" for ::1 at 2021-11-21 15:48:43 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.19ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.6ms | Allocations: 6951)
+
+
+Started GET "/products/22" for ::1 at 2021-11-21 15:48:59 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.59ms)
+Completed 202 Accepted in 6ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 1242)
+
+
+Started DELETE "/products/22" for ::1 at 2021-11-21 15:49:00 -0300
+Processing by ProductsController#deleteByid as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:21:in `deleteByid'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:21:in `deleteByid'
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 22]]
+  ↳ app/controllers/products_controller.rb:21:in `deleteByid'
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:21:in `deleteByid'
+Completed 204 No Content in 16ms (ActiveRecord: 12.5ms | Allocations: 3193)
+
+
+Started GET "/products" for ::1 at 2021-11-21 15:49:01 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.86ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 1675)
+
+
+Started GET "/products/23" for ::1 at 2021-11-21 15:49:05 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.62ms)
+Completed 202 Accepted in 5ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 793)
+
+
+Started DELETE "/products/23" for ::1 at 2021-11-21 15:49:06 -0300
+Processing by ProductsController#deleteByid as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:21:in `deleteByid'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:21:in `deleteByid'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 23]]
+  ↳ app/controllers/products_controller.rb:21:in `deleteByid'
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:21:in `deleteByid'
+Completed 204 No Content in 14ms (ActiveRecord: 9.4ms | Allocations: 4572)
+
+
+Started GET "/products" for ::1 at 2021-11-21 15:49:06 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.52ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 1528)
+
+
+Started GET "/products" for ::1 at 2021-11-21 15:56:34 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.56ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1546)
+
+
+Started GET "/products" for ::1 at 2021-11-21 16:16:30 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.24ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.2ms | Allocations: 1546)
+
+
+Started GET "/products" for ::1 at 2021-11-21 16:16:32 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.94ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.1ms | Allocations: 1528)
+
+
