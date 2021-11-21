@@ -19,6 +19,9 @@ gem 'puma', '~> 4.1'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+# Leitura para todos os tipos comuns de planilhas (https://github.com/roo-rb/roo)
+gem 'roo'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
