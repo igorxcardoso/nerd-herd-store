@@ -36,7 +36,10 @@ class ProductsController < ApplicationController
     end
 
     def updateByid
-        puts @product
+        puts '-------------------'
+        @product = Product.find(params[:id])
+        @product.update(product_params)
+        puts '-------------------'
         # if @product.update(product_params)
         #     render json: @product, status: :created
         # else
