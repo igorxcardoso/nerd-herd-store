@@ -25,9 +25,9 @@ export class ProductUpdateComponent implements OnInit {
 	}
 
 	updateProduct(): void {
-		if (this.produto.price.indexOf(',') !== -1) {
-			this.produto.price = this.produto.price.replace(',', '.'); // Substitui ',' por '.'
-		} 
+		// if (this.produto.price.indexOf(',') !== -1) {
+		// 	this.produto.price = this.produto.price.replace(',', '.'); // Substitui ',' por '.'
+		// } 
 
 		this.productService.update(this.produto).subscribe(() => {
 			this.productService.showMessage('Produto atualizado com sucesso!');
