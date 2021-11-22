@@ -3,8 +3,8 @@
     <form>
         <mat-form-field> <!--Vai pegar o input e colocar dentro do produto, que é meu objeto-->
             <input matInput placeholder="Nome"
-                    [(ngModel)]="produto.title" 
-                    name="nome">
+                    [(ngModel)]="product.title" 
+                    name="title">
         </mat-form-field>
         <!--  Usando o Two-way data binding [(ngModel)] para alterar o nome do produto no component. 
             Então no meu component eu tenho uma atributo dentro de Product chamado name.
@@ -15,8 +15,8 @@
 
         <mat-form-field>
             <input matInput placeholder="Preço (R$)"
-                    [(ngModel)]="produto.price"
-                    name="preco">
+                    [(ngModel)]="product.price"
+                    name="price">
         </mat-form-field>
 
     </form>

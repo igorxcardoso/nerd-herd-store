@@ -27,8 +27,8 @@ export class ProductService {
         });
     }
 
-    create(produto: Product): Observable<Product> {
-        return this.http.post<Product>(this.URL_PRODUCT, { produto }).pipe(
+    create(product: Product): Observable<Product> {
+        return this.http.post<Product>(this.URL_PRODUCT, { product }).pipe(
             map((obj) => obj),
             catchError((myErro) => this.errorHandler(myErro))
         );

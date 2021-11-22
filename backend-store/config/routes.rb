@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   
   resource :products
   get 'products/:id', to: 'products#findByid'
-  delete 'products/:id', to: 'products#deleteByid'
+  delete 'products/:id', to: 'products#destroyByid'
   put 'products/:id', to: 'products#updateByid'
 
 end

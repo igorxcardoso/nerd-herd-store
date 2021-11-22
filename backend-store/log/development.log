@@ -5792,3 +5792,1870 @@ Processing by ProductsController#show as HTML
 Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.2ms | Allocations: 1400)
 
 
+Started GET "/products" for ::1 at 2021-11-22 12:37:46 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.77ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1400)
+
+
+Started GET "/products/19" for ::1 at 2021-11-22 12:37:51 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.84ms)
+Completed 202 Accepted in 19ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 2577)
+
+
+Started PUT "/products/19" for ::1 at 2021-11-22 12:37:56 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.1ms | Allocations: 646)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: produto):
+  
+app/controllers/products_controller.rb:52:in `product_params'
+app/controllers/products_controller.rb:41:in `updateByid'
+Started PUT "/products/19" for ::1 at 2021-11-22 12:38:00 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.2ms | Allocations: 673)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: produto):
+  
+app/controllers/products_controller.rb:52:in `product_params'
+app/controllers/products_controller.rb:41:in `updateByid'
+Started PUT "/products/19" for ::1 at 2021-11-22 12:38:28 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.7ms | Allocations: 3879)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: produto):
+  
+app/controllers/products_controller.rb:52:in `product_params'
+app/controllers/products_controller.rb:41:in `updateByid'
+Started PUT "/products/19" for ::1 at 2021-11-22 12:39:00 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+Completed 204 No Content in 5ms (ActiveRecord: 1.1ms | Allocations: 3755)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:39:00 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.93ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 1718)
+
+
+Started GET "/products/19" for ::1 at 2021-11-22 12:39:23 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.53ms)
+Completed 202 Accepted in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 794)
+
+
+Started PUT "/products/19" for ::1 at 2021-11-22 12:40:23 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 2L", "price"=>"32.99", "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 2L", "price"=>"32.99", "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:41:in `updateByid'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.6ms | Allocations: 4440)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, String passed.):
+  
+app/controllers/products_controller.rb:41:in `updateByid'
+Started PUT "/products/19" for ::1 at 2021-11-22 12:40:28 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 2L", "price"=>"32.99", "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 2L", "price"=>"32.99", "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:41:in `updateByid'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms | Allocations: 1262)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, String passed.):
+  
+app/controllers/products_controller.rb:41:in `updateByid'
+Started PUT "/products/19" for ::1 at 2021-11-22 12:41:44 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 2L", "price"=>"32.99", "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 2L", "price"=>"32.99", "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.1ms | Allocations: 3848)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, String passed.):
+  
+app/controllers/products_controller.rb:41:in `updateByid'
+Started PUT "/products/19" for ::1 at 2021-11-22 12:42:39 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 2L", "price"=>"32.99", "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 2L", "price"=>"32.99", "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+Completed 400 Bad Request in 7ms (ActiveRecord: 1.1ms | Allocations: 3820)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: produto):
+  
+app/controllers/products_controller.rb:42:in `updateByid'
+Started PUT "/products/19" for ::1 at 2021-11-22 12:42:54 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 2L", "price"=>"32.99", "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 2L", "price"=>"32.99", "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+Completed 204 No Content in 6ms (ActiveRecord: 1.0ms | Allocations: 3777)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:42:54 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.51ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1702)
+
+
+Started GET "/products/19" for ::1 at 2021-11-22 12:43:12 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.83ms)
+Completed 202 Accepted in 13ms (Views: 5.7ms | ActiveRecord: 0.5ms | Allocations: 6613)
+
+
+Started PUT "/products/19" for ::1 at 2021-11-22 12:43:15 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 614)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:43:15 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.54ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 1409)
+
+
+Started GET "/products/19" for ::1 at 2021-11-22 12:44:39 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:31:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 202 Accepted in 9ms (Views: 1.3ms | ActiveRecord: 0.7ms | Allocations: 5082)
+
+
+Started DELETE "/products/19" for ::1 at 2021-11-22 12:44:46 -0300
+Processing by ProductsController#deleteByid as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:22:in `deleteByid'
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:44:46 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.69ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1401)
+
+
+Started GET "/products/21" for ::1 at 2021-11-22 12:45:07 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:31:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 202 Accepted in 1ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 793)
+
+
+Started DELETE "/products/21" for ::1 at 2021-11-22 12:45:09 -0300
+Processing by ProductsController#deleteByid as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:22:in `deleteByid'
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 582)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:45:09 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.74ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 1385)
+
+
+Started GET "/products/21" for ::1 at 2021-11-22 12:45:27 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 202 Accepted in 7ms (Views: 1.0ms | ActiveRecord: 0.7ms | Allocations: 5033)
+
+
+Started PUT "/products/21" for ::1 at 2021-11-22 12:45:28 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"21", "title"=>"Bikw Aro 20", "price"=>9.01, "updated_at"=>"2021-11-21T18:48:37.498Z", "product"=>{"id"=>"21", "title"=>"Bikw Aro 20", "price"=>9.01, "updated_at"=>"2021-11-21T18:48:37.498Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 592)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:45:28 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1398)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:46:28 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.74ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.1ms | Allocations: 1382)
+
+
+Started GET "/products/19" for ::1 at 2021-11-22 12:46:32 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 202 Accepted in 1ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 793)
+
+
+Started PUT "/products/19" for ::1 at 2021-11-22 12:46:34 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 593)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:46:34 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.88ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.1ms | Allocations: 1382)
+
+
+Started GET "/products/19" for ::1 at 2021-11-22 12:48:06 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 202 Accepted in 6ms (Views: 1.0ms | ActiveRecord: 0.4ms | Allocations: 5069)
+
+
+Started PUT "/products/19" for ::1 at 2021-11-22 12:48:09 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 569)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:48:09 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.54ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1398)
+
+
+Started GET "/products/19" for ::1 at 2021-11-22 12:48:46 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 202 Accepted in 9ms (Views: 1.0ms | ActiveRecord: 0.9ms | Allocations: 5036)
+
+
+Started PUT "/products/19" for ::1 at 2021-11-22 12:48:48 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 572)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:48:48 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1398)
+
+
+Started GET "/products/19" for ::1 at 2021-11-22 12:49:16 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 202 Accepted in 15ms (Views: 1.5ms | ActiveRecord: 0.5ms | Allocations: 5071)
+
+
+Started PUT "/products/19" for ::1 at 2021-11-22 12:49:18 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 576)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:49:18 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.94ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1398)
+
+
+Started GET "/products/19" for ::1 at 2021-11-22 12:49:36 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 202 Accepted in 8ms (Views: 1.4ms | ActiveRecord: 0.5ms | Allocations: 5039)
+
+
+Started PUT "/products/19" for ::1 at 2021-11-22 12:49:38 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+Completed 204 No Content in 2ms (ActiveRecord: 0.2ms | Allocations: 570)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:49:38 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 1398)
+
+
+Started GET "/products/19" for ::1 at 2021-11-22 12:50:32 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 202 Accepted in 8ms (Views: 1.0ms | ActiveRecord: 0.9ms | Allocations: 5033)
+
+
+Started PUT "/products/19" for ::1 at 2021-11-22 12:50:34 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.1ms | Allocations: 647)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: produto):
+  
+app/controllers/products_controller.rb:54:in `product_params'
+app/controllers/products_controller.rb:43:in `updateByid'
+Started PUT "/products/19" for ::1 at 2021-11-22 12:50:58 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.8ms | Allocations: 3891)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: produto):
+  
+app/controllers/products_controller.rb:43:in `updateByid'
+Started PUT "/products/19" for ::1 at 2021-11-22 12:51:15 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+Completed 204 No Content in 6ms (ActiveRecord: 1.0ms | Allocations: 3782)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:51:15 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.87ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1717)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:52:39 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.51ms)
+Completed 200 OK in 16ms (Views: 7.1ms | ActiveRecord: 7.6ms | Allocations: 5567)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:52:43 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.64ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 1382)
+
+
+Started GET "/products/19" for ::1 at 2021-11-22 12:52:48 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 202 Accepted in 7ms (Views: 1.5ms | ActiveRecord: 0.5ms | Allocations: 5035)
+
+
+Started PUT "/products/19" for ::1 at 2021-11-22 12:52:51 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 596)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:52:51 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.85ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 1398)
+
+
+Started GET "/products/21" for ::1 at 2021-11-22 12:52:57 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 202 Accepted in 2ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 793)
+
+
+Started DELETE "/products/21" for ::1 at 2021-11-22 12:52:59 -0300
+Processing by ProductsController#deleteByid as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:21:in `deleteByid'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:21:in `deleteByid'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 21]]
+  ↳ app/controllers/products_controller.rb:21:in `deleteByid'
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:21:in `deleteByid'
+Completed 204 No Content in 8ms (ActiveRecord: 2.6ms | Allocations: 4610)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:52:59 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 1237)
+
+
+Started POST "/products" for ::1 at 2021-11-22 12:53:18 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"produto"=>{"title"=>"Mesa Aço", "price"=>"23.821"}, "product"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 124)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: product):
+  
+app/controllers/products_controller.rb:54:in `product_params'
+app/controllers/products_controller.rb:8:in `create'
+Started POST "/products" for ::1 at 2021-11-22 12:53:27 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"produto"=>{"title"=>"Mesa Aço", "price"=>"23.821"}, "product"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 124)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: product):
+  
+app/controllers/products_controller.rb:54:in `product_params'
+app/controllers/products_controller.rb:8:in `create'
+Started POST "/products" for ::1 at 2021-11-22 12:53:48 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#create as HTML
+  Parameters: {"produto"=>{"title"=>"Mesa Aço", "price"=>"23.821"}, "product"=>{}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:10:in `create'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Mesa Aço"], ["price", 23.821], ["created_at", "2021-11-22 15:53:48.603687"], ["updated_at", "2021-11-22 15:53:48.603687"]]
+  ↳ app/controllers/products_controller.rb:10:in `create'
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:10:in `create'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 201 Created in 12ms (Views: 1.7ms | ActiveRecord: 3.0ms | Allocations: 8214)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:53:48 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 1414)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:55:09 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.86ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1382)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:55:13 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.81ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.1ms | Allocations: 1382)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:55:20 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.66ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1382)
+
+
+Started POST "/products" for ::1 at 2021-11-22 12:55:28 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"produto"=>{"title"=>"teste", "price"=>"1"}, "product"=>{}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:10:in `create'
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "teste"], ["price", 1.0], ["created_at", "2021-11-22 15:55:28.250952"], ["updated_at", "2021-11-22 15:55:28.250952"]]
+  ↳ app/controllers/products_controller.rb:10:in `create'
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:10:in `create'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 22ms (Views: 0.6ms | ActiveRecord: 9.5ms | Allocations: 4293)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:55:28 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.94ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 1528)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:56:19 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.11ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 1528)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:56:21 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.85ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 1528)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:56:22 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.03ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1528)
+
+
+Started POST "/products" for ::1 at 2021-11-22 12:56:52 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#create as HTML
+  Parameters: {"produto"=>{"title"=>"teste", "price"=>"2"}, "product"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.3ms | Allocations: 143)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: product):
+  
+app/controllers/products_controller.rb:54:in `product_params'
+app/controllers/products_controller.rb:8:in `create'
+Started POST "/products" for ::1 at 2021-11-22 12:57:58 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"ttt", "price"=>"2"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:10:in `create'
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ttt"], ["price", 2.0], ["created_at", "2021-11-22 15:57:58.343320"], ["updated_at", "2021-11-22 15:57:58.343320"]]
+  ↳ app/controllers/products_controller.rb:10:in `create'
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:10:in `create'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 201 Created in 13ms (Views: 1.2ms | ActiveRecord: 3.1ms | Allocations: 8558)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:57:58 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.11ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 1705)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:58:25 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.01ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 1673)
+
+
+Started GET "/products/27" for ::1 at 2021-11-22 12:58:40 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 202 Accepted in 4ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 911)
+
+
+Started DELETE "/products/27" for ::1 at 2021-11-22 12:58:42 -0300
+Processing by ProductsController#deleteByid as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:21:in `deleteByid'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:21:in `deleteByid'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 27]]
+  ↳ app/controllers/products_controller.rb:21:in `deleteByid'
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:21:in `deleteByid'
+Completed 204 No Content in 15ms (ActiveRecord: 10.6ms | Allocations: 4571)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:58:42 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.78ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 1528)
+
+
+Started GET "/products/26" for ::1 at 2021-11-22 12:58:46 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 202 Accepted in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 793)
+
+
+Started PUT "/products/26" for ::1 at 2021-11-22 12:58:57 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"26", "title"=>"Cadeira Game", "price"=>"1000", "updated_at"=>"2021-11-22T15:55:28.250Z", "product"=>{"id"=>"26", "title"=>"Cadeira Game", "price"=>"1000", "updated_at"=>"2021-11-22T15:55:28.250Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+Completed 204 No Content in 1ms (ActiveRecord: 0.2ms | Allocations: 596)
+
+
+Started GET "/products" for ::1 at 2021-11-22 12:58:57 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.58ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 1528)
+
+
+Started GET "/products/26" for ::1 at 2021-11-22 12:59:39 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 202 Accepted in 6ms (Views: 1.0ms | ActiveRecord: 0.5ms | Allocations: 5069)
+
+
+Started PUT "/products/26" for ::1 at 2021-11-22 12:59:46 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"26", "title"=>"Cadeira Game", "price"=>1, "updated_at"=>"2021-11-22T15:55:28.250Z", "product"=>{"id"=>"26", "title"=>"Cadeira Game", "price"=>1, "updated_at"=>"2021-11-22T15:55:28.250Z"}}
+[31mUnpermitted parameters: :id, :updated_at[0m
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 583)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/products_controller.rb:39:in `updateByid'
+Started PUT "/products/26" for ::1 at 2021-11-22 13:00:13 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"26", "title"=>"Cadeira Game", "price"=>1, "updated_at"=>"2021-11-22T15:55:28.250Z", "product"=>{"id"=>"26", "title"=>"Cadeira Game", "price"=>1, "updated_at"=>"2021-11-22T15:55:28.250Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+[31mUnpermitted parameters: :id, :updated_at[0m
+Completed 204 No Content in 6ms (ActiveRecord: 1.0ms | Allocations: 3838)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:00:13 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.12ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 1847)
+
+
+Started GET "/products/26" for ::1 at 2021-11-22 13:00:40 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 202 Accepted in 7ms (Views: 1.0ms | ActiveRecord: 0.6ms | Allocations: 5071)
+
+
+Started PUT "/products/26" for ::1 at 2021-11-22 13:00:41 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"26", "title"=>"teste", "price"=>1, "updated_at"=>"2021-11-22T15:55:28.250Z", "product"=>{"id"=>"26", "title"=>"teste", "price"=>1, "updated_at"=>"2021-11-22T15:55:28.250Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `updateByid'
+[31mUnpermitted parameters: :id, :updated_at[0m
+Completed 204 No Content in 2ms (ActiveRecord: 0.2ms | Allocations: 650)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:00:42 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.35ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.2ms | Allocations: 1544)
+
+
+Started GET "/products/19" for ::1 at 2021-11-22 13:01:06 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 202 Accepted in 7ms (Views: 1.0ms | ActiveRecord: 0.8ms | Allocations: 5033)
+
+
+Started PUT "/products/19" for ::1 at 2021-11-22 13:01:07 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+[31mUnpermitted parameters: :id, :updated_at[0m
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 133)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:01:07 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.2ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1544)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:01:43 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.67ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1528)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:01:53 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.6ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 1528)
+
+
+Started GET "/products/19" for ::1 at 2021-11-22 13:02:10 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 202 Accepted in 11ms (Views: 1.4ms | ActiveRecord: 0.7ms | Allocations: 5069)
+
+
+Started PUT "/products/19" for ::1 at 2021-11-22 13:02:12 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+[31mUnpermitted parameters: :id, :updated_at[0m
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 133)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:02:12 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.06ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 1544)
+
+
+Started GET "/products/19" for ::1 at 2021-11-22 13:02:41 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 202 Accepted in 8ms (Views: 1.3ms | ActiveRecord: 0.5ms | Allocations: 5033)
+
+
+Started PUT "/products/19" for ::1 at 2021-11-22 13:02:42 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z", "product"=>{"id"=>"19", "title"=>"Garrafa 1L", "price"=>32.9, "updated_at"=>"2021-11-21T18:48:37.488Z"}}
+[31mUnpermitted parameters: :id, :updated_at[0m
+[31mUnpermitted parameters: :id, :updated_at[0m
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 646)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/products_controller.rb:43:in `updateByid'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Update (13.7ms)[0m  [1m[33mUPDATE "products" SET "title" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["title", "igor"], ["updated_at", "2021-11-22 16:20:17.394339"], ["id", 19]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/products" for ::1 at 2021-11-22 13:22:06 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.57ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.2ms | Allocations: 5398)
+
+
+Started GET "/products/26" for ::1 at 2021-11-22 13:22:10 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 202 Accepted in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 911)
+
+
+Started PUT "/products/26" for ::1 at 2021-11-22 13:22:12 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"26", "title"=>"teste", "price"=>1, "updated_at"=>"2021-11-22T15:55:28.250Z", "product"=>{"id"=>"26", "title"=>"teste", "price"=>1, "updated_at"=>"2021-11-22T15:55:28.250Z"}}
+[31mUnpermitted parameters: :id, :updated_at[0m
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 586)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/products_controller.rb:43:in `updateByid'
+Started PUT "/products/26" for ::1 at 2021-11-22 13:22:51 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"26", "title"=>"teste", "price"=>1, "updated_at"=>"2021-11-22T15:55:28.250Z", "product"=>{"id"=>"26", "title"=>"teste", "price"=>1, "updated_at"=>"2021-11-22T15:55:28.250Z"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.3ms | Allocations: 500)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/products_controller.rb:42:in `updateByid'
+Started GET "/products" for ::1 at 2021-11-22 13:22:52 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.69ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.4ms | Allocations: 4896)
+
+
+Started GET "/products/26" for ::1 at 2021-11-22 13:22:54 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 202 Accepted in 2ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 911)
+
+
+Started PUT "/products/26" for ::1 at 2021-11-22 13:22:56 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"26", "title"=>"teste", "price"=>1, "updated_at"=>"2021-11-22T15:55:28.250Z", "product"=>{"id"=>"26", "title"=>"teste", "price"=>1, "updated_at"=>"2021-11-22T15:55:28.250Z"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 480)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/products_controller.rb:42:in `updateByid'
+Started GET "/products" for ::1 at 2021-11-22 13:23:26 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.64ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.8ms | Allocations: 5715)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:23:29 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.6ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 1528)
+
+
+Started GET "/products/26" for ::1 at 2021-11-22 13:23:31 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 202 Accepted in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 911)
+
+
+Started PUT "/products/26" for ::1 at 2021-11-22 13:23:33 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"26", "title"=>"teste", "price"=>1, "updated_at"=>"2021-11-22T15:55:28.250Z", "product"=>{"id"=>"26", "title"=>"teste", "price"=>1, "updated_at"=>"2021-11-22T15:55:28.250Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:43:in `updateByid'
+  [1m[36mProduct Update (0.7ms)[0m  [1m[33mUPDATE "products" SET "title" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["title", "ESTOUAQUI"], ["updated_at", "2021-11-22 16:23:33.571640"], ["id", 26]]
+  ↳ app/controllers/products_controller.rb:43:in `updateByid'
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:43:in `updateByid'
+Completed 204 No Content in 11ms (ActiveRecord: 3.3ms | Allocations: 4664)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:23:33 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.9ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 1528)
+
+
+Started GET "/products/25" for ::1 at 2021-11-22 13:23:49 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 202 Accepted in 7ms (Views: 1.2ms | ActiveRecord: 0.8ms | Allocations: 5033)
+
+
+Started PUT "/products/25" for ::1 at 2021-11-22 13:23:50 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"25", "title"=>"Mesa Aço", "price"=>23.821, "updated_at"=>"2021-11-22T15:53:48.603Z", "product"=>{"id"=>"25", "title"=>"Mesa Aço", "price"=>23.821, "updated_at"=>"2021-11-22T15:53:48.603Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:43:in `updateByid'
+  [1m[36mProduct Update (0.2ms)[0m  [1m[33mUPDATE "products" SET "title" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["title", "ESTOUAQUI"], ["updated_at", "2021-11-22 16:23:50.959084"], ["id", 25]]
+  ↳ app/controllers/products_controller.rb:43:in `updateByid'
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:43:in `updateByid'
+Completed 204 No Content in 15ms (ActiveRecord: 9.6ms | Allocations: 3595)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:23:51 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.58ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 1544)
+
+
+Started GET "/products/20" for ::1 at 2021-11-22 13:24:06 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 202 Accepted in 7ms (Views: 1.1ms | ActiveRecord: 0.6ms | Allocations: 5069)
+
+
+Started PUT "/products/20" for ::1 at 2021-11-22 13:24:07 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z", "product"=>{"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+[31mUnpermitted parameters: :id, :updated_at[0m
+Completed 204 No Content in 3ms (ActiveRecord: 0.2ms | Allocations: 819)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:24:07 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.75ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1546)
+
+
+Started GET "/products/20" for ::1 at 2021-11-22 13:25:40 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+Completed 202 Accepted in 6ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 5033)
+
+
+Started PUT "/products/20" for ::1 at 2021-11-22 13:25:41 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z", "product"=>{"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms | Allocations: 644)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 0)):
+  
+app/controllers/products_controller.rb:56:in `product_params'
+app/controllers/products_controller.rb:43:in `updateByid'
+Started GET "/products" for ::1 at 2021-11-22 13:25:42 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.53ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1543)
+
+
+Started GET "/products/20" for ::1 at 2021-11-22 13:25:45 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 202 Accepted in 3ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 793)
+
+
+Started PUT "/products/20" for ::1 at 2021-11-22 13:25:46 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z", "product"=>{"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms | Allocations: 642)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 0)):
+  
+app/controllers/products_controller.rb:56:in `product_params'
+app/controllers/products_controller.rb:43:in `updateByid'
+Started GET "/products" for ::1 at 2021-11-22 13:25:47 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.75ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms | Allocations: 1527)
+
+
+Started GET "/products/20" for ::1 at 2021-11-22 13:27:06 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 202 Accepted in 7ms (Views: 1.0ms | ActiveRecord: 0.9ms | Allocations: 5085)
+
+
+Started PUT "/products/20" for ::1 at 2021-11-22 13:27:07 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z", "product"=>{"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms | Allocations: 642)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 0)):
+  
+app/controllers/products_controller.rb:56:in `product_params'
+app/controllers/products_controller.rb:43:in `updateByid'
+Started PUT "/products/20" for ::1 at 2021-11-22 13:27:08 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z", "product"=>{"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms | Allocations: 641)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 0)):
+  
+app/controllers/products_controller.rb:56:in `product_params'
+app/controllers/products_controller.rb:43:in `updateByid'
+Started PUT "/products/20" for ::1 at 2021-11-22 13:27:09 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z", "product"=>{"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms | Allocations: 641)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 0)):
+  
+app/controllers/products_controller.rb:56:in `product_params'
+app/controllers/products_controller.rb:43:in `updateByid'
+Started PUT "/products/20" for ::1 at 2021-11-22 13:27:09 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z", "product"=>{"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 641)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 0)):
+  
+app/controllers/products_controller.rb:56:in `product_params'
+app/controllers/products_controller.rb:43:in `updateByid'
+Started PUT "/products/20" for ::1 at 2021-11-22 13:27:09 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z", "product"=>{"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 641)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 0)):
+  
+app/controllers/products_controller.rb:56:in `product_params'
+app/controllers/products_controller.rb:43:in `updateByid'
+Started PUT "/products/20" for ::1 at 2021-11-22 13:27:09 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z", "product"=>{"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 641)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 0)):
+  
+app/controllers/products_controller.rb:56:in `product_params'
+app/controllers/products_controller.rb:43:in `updateByid'
+Started PUT "/products/20" for ::1 at 2021-11-22 13:28:07 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z", "product"=>{"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 500 Internal Server Error in 133ms (ActiveRecord: 0.8ms | Allocations: 75092)
+
+
+  
+NameError (undefined local variable or method `permitted' for #<ProductsController:0x00007f0c60aefa88>):
+  
+app/controllers/products_controller.rb:43:in `updateByid'
+Started PUT "/products/20" for ::1 at 2021-11-22 13:28:16 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z", "product"=>{"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 500 Internal Server Error in 143ms (ActiveRecord: 0.2ms | Allocations: 71800)
+
+
+  
+NameError (undefined local variable or method `permitted' for #<ProductsController:0x00005633ba3a3808>):
+  
+app/controllers/products_controller.rb:43:in `updateByid'
+Started PUT "/products/20" for ::1 at 2021-11-22 13:28:52 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z", "product"=>{"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 1.0ms | Allocations: 75090)
+
+
+  
+NameError (undefined local variable or method `permitted' for #<ProductsController:0x00005633babd4f68>):
+  
+app/controllers/products_controller.rb:43:in `updateByid'
+Started PUT "/products/20" for ::1 at 2021-11-22 13:29:17 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z", "product"=>{"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 0.9ms | Allocations: 75064)
+
+
+  
+NameError (undefined local variable or method `permitted' for #<ProductsController:0x00007f0c608798d0>):
+  
+app/controllers/products_controller.rb:43:in `updateByid'
+Started PUT "/products/20" for ::1 at 2021-11-22 13:29:22 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z", "product"=>{"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 0.2ms | Allocations: 71799)
+
+
+  
+NameError (undefined local variable or method `permitted' for #<ProductsController:0x00007f0c60d28728>):
+  
+app/controllers/products_controller.rb:43:in `updateByid'
+Started PUT "/products/20" for ::1 at 2021-11-22 13:29:43 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z", "product"=>{"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z"}}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 204 No Content in 7ms (ActiveRecord: 1.2ms | Allocations: 3754)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:29:43 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.73ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 1850)
+
+
+Started GET "/products/20" for ::1 at 2021-11-22 13:29:49 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 202 Accepted in 2ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 793)
+
+
+Started PUT "/products/20" for ::1 at 2021-11-22 13:29:50 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z", "product"=>{"id"=>"20", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-21T18:48:37.493Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 570)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:29:50 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.69ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.1ms | Allocations: 1530)
+
+
+Started GET "/products/19" for ::1 at 2021-11-22 13:31:11 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 202 Accepted in 8ms (Views: 1.4ms | ActiveRecord: 0.5ms | Allocations: 5069)
+
+
+Started PUT "/products/19" for ::1 at 2021-11-22 13:31:12 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"igor", "price"=>32.9, "updated_at"=>"2021-11-22T16:20:17.394Z", "product"=>{"id"=>"19", "title"=>"igor", "price"=>32.9, "updated_at"=>"2021-11-22T16:20:17.394Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms | Allocations: 642)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 0)):
+  
+app/controllers/products_controller.rb:60:in `product_params'
+app/controllers/products_controller.rb:43:in `updateByid'
+Started PUT "/products/19" for ::1 at 2021-11-22 13:31:23 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"19", "title"=>"igor", "price"=>32.9, "updated_at"=>"2021-11-22T16:20:17.394Z", "product"=>{"id"=>"19", "title"=>"igor", "price"=>32.9, "updated_at"=>"2021-11-22T16:20:17.394Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 204 No Content in 5ms (ActiveRecord: 0.6ms | Allocations: 3754)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:31:23 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.1ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 1848)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (49.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProducts (20211117195739)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" float, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211117195739"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-22 16:32:43.085912"], ["updated_at", "2021-11-22 16:32:43.085912"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "S3 Novo 16GB"], ["price", 52.89], ["created_at", "2021-11-22 16:32:45.481422"], ["updated_at", "2021-11-22 16:32:45.481422"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Garrafa 1L"], ["price", 32.9], ["created_at", "2021-11-22 16:32:45.495627"], ["updated_at", "2021-11-22 16:32:45.495627"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "TV LED ‘23"], ["price", 21.0], ["created_at", "2021-11-22 16:32:45.500271"], ["updated_at", "2021-11-22 16:32:45.500271"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Bikw Aro 20"], ["price", 9.01], ["created_at", "2021-11-22 16:32:45.504595"], ["updated_at", "2021-11-22 16:32:45.504595"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Tênis Nike 12M"], ["price", 21.91], ["created_at", "2021-11-22 16:32:45.508742"], ["updated_at", "2021-11-22 16:32:45.508742"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Copo de vidro"], ["price", 0.92], ["created_at", "2021-11-22 16:32:45.512824"], ["updated_at", "2021-11-22 16:32:45.512824"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+Started GET "/products" for ::1 at 2021-11-22 13:32:56 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.52ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.6ms | Allocations: 7246)
+
+
+Started GET "/products/6" for ::1 at 2021-11-22 13:32:59 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 202 Accepted in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 1242)
+
+
+Started PUT "/products/6" for ::1 at 2021-11-22 13:33:00 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"6", "title"=>"Copo de vidro", "price"=>0.92, "updated_at"=>"2021-11-22T16:32:45.512Z", "product"=>{"id"=>"6", "title"=>"Copo de vidro", "price"=>0.92, "updated_at"=>"2021-11-22T16:32:45.512Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 204 No Content in 3ms (ActiveRecord: 0.1ms | Allocations: 591)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:33:00 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.71ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.1ms | Allocations: 1821)
+
+
+Started GET "/products/6" for ::1 at 2021-11-22 13:34:21 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 202 Accepted in 8ms (Views: 1.2ms | ActiveRecord: 0.5ms | Allocations: 5048)
+
+
+Started PUT "/products/6" for ::1 at 2021-11-22 13:34:22 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"6", "title"=>"Copo de vidro", "price"=>0.92, "updated_at"=>"2021-11-22T16:32:45.512Z", "product"=>{"id"=>"6", "title"=>"Copo de vidro", "price"=>0.92, "updated_at"=>"2021-11-22T16:32:45.512Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 1200)
+
+
+  
+NoMethodError (undefined method `permit_all_parameters' for #<ActionController::Parameters:0x00007f7a50de8dd0>):
+  
+app/controllers/products_controller.rb:44:in `updateByid'
+Started PUT "/products/6" for ::1 at 2021-11-22 13:35:48 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"6", "title"=>"Copo de vidro", "price"=>0.92, "updated_at"=>"2021-11-22T16:32:45.512Z", "product"=>{"id"=>"6", "title"=>"Copo de vidro", "price"=>0.92, "updated_at"=>"2021-11-22T16:32:45.512Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 204 No Content in 5ms (ActiveRecord: 0.6ms | Allocations: 3834)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:35:49 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.47ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 2154)
+
+
+Started GET "/products/3" for ::1 at 2021-11-22 13:37:36 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 202 Accepted in 9ms (Views: 1.2ms | ActiveRecord: 0.8ms | Allocations: 5069)
+
+
+Started PUT "/products/3" for ::1 at 2021-11-22 13:37:36 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"3", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-22T16:32:45.500Z", "product"=>{"id"=>"3", "title"=>"TV LED ‘23", "price"=>21, "updated_at"=>"2021-11-22T16:32:45.500Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 1073)
+
+
+  
+NoMethodError (private method `require' called for nil:NilClass):
+  
+app/controllers/products_controller.rb:44:in `updateByid'
+Started GET "/products" for ::1 at 2021-11-22 13:38:49 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.87ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 1.1ms | Allocations: 6005)
+
+
+Started GET "/products/1" for ::1 at 2021-11-22 13:38:51 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 202 Accepted in 2ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 930)
+
+
+Started PUT "/products/1" for ::1 at 2021-11-22 13:38:53 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"1", "title"=>"S3 Novo 16GB", "price"=>52.89, "updated_at"=>"2021-11-22T16:32:45.481Z", "product"=>{"id"=>"1", "title"=>"S3 Novo 16GB", "price"=>52.89, "updated_at"=>"2021-11-22T16:32:45.481Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:42:in `updateByid'
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 574)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:38:53 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.66ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1818)
+
+
+Started GET "/products/6" for ::1 at 2021-11-22 13:40:06 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 202 Accepted in 7ms (Views: 1.0ms | ActiveRecord: 0.7ms | Allocations: 5038)
+
+
+Started PUT "/products/6" for ::1 at 2021-11-22 13:40:09 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"6", "title"=>"Copo de vidro", "price"=>0.92, "updated_at"=>"2021-11-22T16:32:45.512Z", "product"=>{"id"=>"6", "title"=>"Copo de vidro", "price"=>0.92, "updated_at"=>"2021-11-22T16:32:45.512Z"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 478)
+
+
+  
+NoMethodError (undefined method `title' for nil:NilClass):
+  
+app/controllers/products_controller.rb:44:in `updateByid'
+Started GET "/products" for ::1 at 2021-11-22 13:43:09 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.9ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.9ms | Allocations: 6003)
+
+
+Started GET "/products/6" for ::1 at 2021-11-22 13:43:12 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 202 Accepted in 2ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 911)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:43:20 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.74ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 1818)
+
+
+Started GET "/products/6" for ::1 at 2021-11-22 13:43:23 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 202 Accepted in 2ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 793)
+
+
+Started PUT "/products/6" for ::1 at 2021-11-22 13:43:25 -0300
+  
+ActionController::RoutingError (No route matches [PUT] "/products/6"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/products" for ::1 at 2021-11-22 13:44:18 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.79ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 1.0ms | Allocations: 6003)
+
+
+Started GET "/products/1" for ::1 at 2021-11-22 13:44:19 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 202 Accepted in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 911)
+
+
+Started PUT "/products/1" for ::1 at 2021-11-22 13:44:20 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"1", "title"=>"S3 Novo 16GB", "price"=>52.89, "updated_at"=>"2021-11-22T16:32:45.481Z", "product"=>{"id"=>"1", "title"=>"S3 Novo 16GB", "price"=>52.89, "updated_at"=>"2021-11-22T16:32:45.481Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:49:in `updateByid'
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 574)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:44:20 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.28ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms | Allocations: 1818)
+
+
+Started GET "/products/6" for ::1 at 2021-11-22 13:44:39 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 202 Accepted in 2ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 793)
+
+
+Started PUT "/products/6" for ::1 at 2021-11-22 13:44:40 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"6", "title"=>"Copo de vidro", "price"=>0.92, "updated_at"=>"2021-11-22T16:32:45.512Z", "product"=>{"id"=>"6", "title"=>"Copo de vidro", "price"=>0.92, "updated_at"=>"2021-11-22T16:32:45.512Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:49:in `updateByid'
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 574)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:44:40 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.81ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1818)
+
+
+Started GET "/products/6" for ::1 at 2021-11-22 13:44:45 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 202 Accepted in 2ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 793)
+
+
+Started PUT "/products/6" for ::1 at 2021-11-22 13:44:49 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"6", "title"=>"kkko", "price"=>0.92, "updated_at"=>"2021-11-22T16:32:45.512Z", "product"=>{"id"=>"6", "title"=>"kkko", "price"=>0.92, "updated_at"=>"2021-11-22T16:32:45.512Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:49:in `updateByid'
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 574)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:44:49 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.72ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 1818)
+
+
+Started GET "/products/6" for ::1 at 2021-11-22 13:45:39 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 202 Accepted in 7ms (Views: 1.1ms | ActiveRecord: 0.8ms | Allocations: 5069)
+
+
+Started PUT "/products/6" for ::1 at 2021-11-22 13:45:43 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"6", "title"=>"Copo de vidro", "price"=>0.92, "updated_at"=>"2021-11-22T16:32:45.512Z", "product"=>{"id"=>"6", "title"=>"Copo de vidro", "price"=>0.92, "updated_at"=>"2021-11-22T16:32:45.512Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:49:in `updateByid'
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 572)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:45:43 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.06ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 1834)
+
+
+Started GET "/products/6" for ::1 at 2021-11-22 13:46:45 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 202 Accepted in 7ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 5033)
+
+
+Started PUT "/products/6" for ::1 at 2021-11-22 13:46:49 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"6", "title"=>"Copo de vidro 2", "price"=>0.92, "updated_at"=>"2021-11-22T16:32:45.512Z", "product"=>{"id"=>"6", "title"=>"Copo de vidro 2", "price"=>0.92, "updated_at"=>"2021-11-22T16:32:45.512Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:49:in `updateByid'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:60:in `updateByid'
+  [1m[36mProduct Update (1.4ms)[0m  [1m[33mUPDATE "products" SET "title" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["title", "Copo de vidro 2"], ["updated_at", "2021-11-22 16:46:49.389069"], ["id", 6]]
+  ↳ app/controllers/products_controller.rb:60:in `updateByid'
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:60:in `updateByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 17ms (Views: 1.4ms | ActiveRecord: 10.7ms | Allocations: 4365)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:46:49 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.63ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 1834)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:48:49 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.7ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.7ms | Allocations: 6003)
+
+
+Started GET "/products/6" for ::1 at 2021-11-22 13:48:51 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:26:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 202 Accepted in 3ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 911)
+
+
+Started PUT "/products/6" for ::1 at 2021-11-22 13:48:53 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"6", "title"=>"Copo de vidro 2", "price"=>"1", "updated_at"=>"2021-11-22T16:46:49.389Z", "product"=>{"id"=>"6", "title"=>"Copo de vidro 2", "price"=>"1", "updated_at"=>"2021-11-22T16:46:49.389Z"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 504)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/products_controller.rb:48:in `updateByid'
+Started PUT "/products/6" for ::1 at 2021-11-22 13:49:02 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"6", "title"=>"Copo de vidro 2", "price"=>"1", "updated_at"=>"2021-11-22T16:46:49.389Z", "product"=>{"id"=>"6", "title"=>"Copo de vidro 2", "price"=>"1", "updated_at"=>"2021-11-22T16:46:49.389Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:46:in `updateByid'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:48:in `updateByid'
+  [1m[36mProduct Update (0.9ms)[0m  [1m[33mUPDATE "products" SET "price" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["price", 1.0], ["updated_at", "2021-11-22 16:49:02.196863"], ["id", 6]]
+  ↳ app/controllers/products_controller.rb:48:in `updateByid'
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:48:in `updateByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 201 Created in 22ms (Views: 2.5ms | ActiveRecord: 7.3ms | Allocations: 8070)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:49:02 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.07ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 1834)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:50:52 -0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.25ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.5ms | Allocations: 6003)
+
+
+Started GET "/products/3" for ::1 at 2021-11-22 13:52:29 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:29:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 202 Accepted in 21ms (Views: 1.4ms | ActiveRecord: 1.1ms | Allocations: 5073)
+
+
+Started PUT "/products/3" for ::1 at 2021-11-22 13:52:32 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"3", "title"=>"TV LED ‘24", "price"=>21, "updated_at"=>"2021-11-22T16:32:45.500Z", "product"=>{"id"=>"3", "title"=>"TV LED ‘24", "price"=>21, "updated_at"=>"2021-11-22T16:32:45.500Z"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:34:in `updateByid'
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms | Allocations: 641)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0)):
+  
+app/controllers/products_controller.rb:36:in `updateByid'

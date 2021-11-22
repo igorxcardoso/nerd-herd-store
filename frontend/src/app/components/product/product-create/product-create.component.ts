@@ -10,7 +10,7 @@ import { Product } from '../product.model';
 })
 export class ProductCreateComponent implements OnInit {
 
-	produto: Product = {  // O id é opecional, foi definido no model
+	product: Product = {  // O id é opecional, foi definido no model
 		title: '',
 		price: ''
 	};
@@ -23,11 +23,11 @@ export class ProductCreateComponent implements OnInit {
 	}
 
 	createProduct(): void {
-		if(this.produto.price.indexOf(',') !== -1) {
-			this.produto.price = this.produto.price.replace(',', '.');
+		if(this.product.price.indexOf(',') !== -1) {
+			this.product.price = this.product.price.replace(',', '.');
 		}
 
-		this.productService.create(this.produto).subscribe(() => {
+		this.productService.create(this.product).subscribe(() => {
 			this.productService.showMessage('Produto criado com sucesso!');
 			this.myRouter.navigate(['/produtos']);
 		});	

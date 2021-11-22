@@ -17,7 +17,10 @@ class ProductsController < ApplicationController
     def destroy
     end
 
-    def deleteByid  # Vai deletar apartir do id
+    def update
+    end
+
+    def destroyByid  # Vai deletar apartir do id
         Product.find(params[:id]).destroy!
         head :no_content
     end
@@ -27,29 +30,19 @@ class ProductsController < ApplicationController
         render json: @product, status: :accepted
     end
 
-    def update
-        # if @product.update(product_params)
-        #     render json: @product, status: :created
-        # else
-        #     render json: @product.erros, status: :unprocessable_entity
-        # end
-    end
-
     def updateByid
-        puts '-------------------'
         @product = Product.find(params[:id])
-        @product.update(product_params)
-        puts '-------------------'
-        # if @product.update(product_params)
-        #     render json: @product, status: :created
-        # else
-        #     render json: @product.erros, status: :unprocessable_entity
-        # end
+        puts params.permitted?
+        if @product.update(title: params[:title], price: params[:price])
+            render json: @product, status: :created
+        else
+            render json: @product.erros, status: :unprocessable_entity
+        end
     end
 
     private
     def product_params
-        params.require(:produto).permit(:title, :price)
+        params.require(:product).permit!(:title, :price)
         # ActiveModelSerializers::Deserialization.jsonapi_parse(params, polymorphic: [:user], embedded: [:user_detail])
     end
 end
