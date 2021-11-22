@@ -1,0 +1,7 @@
+echo "Executando Rails..."
+cd ./backend-store; 
+rails s;
+# cd ..
+# echo "Executando Angular..."
+# cd ./frontend;
+# npm start
