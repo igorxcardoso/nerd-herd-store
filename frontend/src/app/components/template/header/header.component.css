@@ -21,3 +21,16 @@
 .cabecalho .grupo-titulo i {  /* Será aplicado na tag i (icon) */
     padding-right: 5px;
 }
+
+.login {
+    text-align: center; 
+    position:absolute;
+    right:30px;
+
+    
+    /* Peguei de .cabecalho */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
