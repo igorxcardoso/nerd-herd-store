@@ -1,4 +1,4 @@
-import { UserComponent } from './components/user/user.component';
+import { LoginComponent } from './components/user/login/login.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
@@ -42,8 +42,8 @@ const routes: Routes = [
 		component: AboutComponent
 	},
 	{
-		path:"login",
-		component: UserComponent
+		path: "login",
+		component: LoginComponent
 	}
 ];
 
