@@ -7659,3 +7659,43 @@ Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms | Allocations: 6
 ArgumentError (wrong number of arguments (given 2, expected 0)):
   
 app/controllers/products_controller.rb:36:in `updateByid'
+Started PUT "/products/3" for ::1 at 2021-11-22 13:55:04 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"3", "title"=>"TV LED ‘24", "price"=>21, "updated_at"=>"2021-11-22T16:32:45.500Z", "product"=>{"id"=>"3", "title"=>"TV LED ‘24", "price"=>21, "updated_at"=>"2021-11-22T16:32:45.500Z"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:34:in `updateByid'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:36:in `updateByid'
+  [1m[36mProduct Update (3.2ms)[0m  [1m[33mUPDATE "products" SET "title" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["title", "TV LED ‘24"], ["updated_at", "2021-11-22 16:55:04.731262"], ["id", 3]]
+  ↳ app/controllers/products_controller.rb:36:in `updateByid'
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:36:in `updateByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 201 Created in 29ms (Views: 1.8ms | ActiveRecord: 8.8ms | Allocations: 8770)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:55:04 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.36ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1834)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:55:13 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.53ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.3ms | Allocations: 1818)
+
+
+Started GET "/products" for ::1 at 2021-11-22 13:55:30 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.72ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 1818)
+
+
