@@ -23,7 +23,6 @@ export class LoginComponent implements OnInit {
   }
 
   submitLogin() {
-    debugger
     var dadosLogin = this.loginForm.getRawValue() as LoginUser; // O 'as LoginUser' é para facilitar a idetificação da var
   }
 
