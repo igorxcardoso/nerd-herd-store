@@ -6,4 +6,11 @@ Rails.application.routes.draw do
   delete 'products/:id', to: 'products#destroyByid'
   put 'products/:id', to: 'products#updateByid'
 
+  # namespace :api, defaults: { format: :json } do
+  #   resource :products
+  #   get 'products/:id', to: 'products#findByid'
+  #   delete 'products/:id', to: 'products#destroyByid'
+  #   put 'products/:id', to: 'products#updateByid'
+  # end
+
 end
