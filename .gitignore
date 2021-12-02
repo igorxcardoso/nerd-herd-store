@@ -1,0 +1,8 @@
+# Date Base
+backend-store/db/development.sqlite3
+backend-store/db/test.sqlite3
+
+
+# Cache
+backend-store/tmp/cache/*
+backend-store/tmp/cache/bootsnap/*
