@@ -4,5 +4,9 @@ backend-store/db/test.sqlite3
 
 
 # Cache
-backend-store/tmp/cache/*
-backend-store/tmp/cache/bootsnap/*
+backend-store/tmp/cache/
+
+
+
+# Frontend
+frontend/node_modules/
