@@ -47,3 +47,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Devise para autenticar
 gem "devise_token_auth", "~> 1.2"
+
+# Use pg as the database for Active Record
+gem 'pg'

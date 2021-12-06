@@ -8375,3 +8375,100 @@ Migrating to CreateProducts (20211117195739)
   ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
   [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "products_database_development"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "products_database_test"[0m
+  [1m[35m (96.0ms)[0m  [1m[35mCREATE DATABASE "products_database_development" ENCODING = 'utf8'[0m
+  [1m[35m (49.2ms)[0m  [1m[35mCREATE DATABASE "products_database_test" ENCODING = 'utf8'[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3498293738585800350)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProducts (20211117195739)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "title" character varying, "price" float, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211117195739"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-12-06 13:05:16.919116"], ["updated_at", "2021-12-06 13:05:16.919116"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3498293738585800350)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Produto 1"], ["price", 21.0], ["created_at", "2021-12-06 13:05:26.309297"], ["updated_at", "2021-12-06 13:05:26.309297"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Produto 2"], ["price", 42.0], ["created_at", "2021-12-06 13:05:26.315471"], ["updated_at", "2021-12-06 13:05:26.315471"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Produto 3"], ["price", 63.0], ["created_at", "2021-12-06 13:05:26.323091"], ["updated_at", "2021-12-06 13:05:26.323091"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Produto 4"], ["price", 84.0], ["created_at", "2021-12-06 13:05:26.330461"], ["updated_at", "2021-12-06 13:05:26.330461"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Produto 5"], ["price", 105.0], ["created_at", "2021-12-06 13:05:26.336926"], ["updated_at", "2021-12-06 13:05:26.336926"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2021-12-06 10:23:57 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/igor/.rvm/gems/ruby-2.6.3/gems/railties-6.0.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/igor/.rvm/gems/ruby-2.6.3/gems/railties-6.0.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.4ms | Allocations: 477)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 2610)
+
+
+Started GET "/products" for ::1 at 2021-12-06 10:24:12 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.6ms)
+Completed 200 OK in 38ms (Views: 31.0ms | ActiveRecord: 4.4ms | Allocations: 8229)
+
+
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (1.0ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "S3 Novo 16GB"], ["price", 52.89], ["created_at", "2021-12-06 13:25:04.611384"], ["updated_at", "2021-12-06 13:25:04.611384"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Garrafa 1L"], ["price", 32.9], ["created_at", "2021-12-06 13:25:04.619618"], ["updated_at", "2021-12-06 13:25:04.619618"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "TV LED ‘23"], ["price", 21.0], ["created_at", "2021-12-06 13:25:04.624020"], ["updated_at", "2021-12-06 13:25:04.624020"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Bikw Aro 20"], ["price", 9.01], ["created_at", "2021-12-06 13:25:04.628033"], ["updated_at", "2021-12-06 13:25:04.628033"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Tênis Nike 12M"], ["price", 21.91], ["created_at", "2021-12-06 13:25:04.632430"], ["updated_at", "2021-12-06 13:25:04.632430"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Copo de vidro"], ["price", 0.92], ["created_at", "2021-12-06 13:25:04.637076"], ["updated_at", "2021-12-06 13:25:04.637076"]]
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/load_data_xlsx.rake:23:in `block (3 levels) in <main>'
+Started GET "/products" for ::1 at 2021-12-06 10:25:16 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.93ms)
+Completed 200 OK in 25ms (Views: 19.6ms | ActiveRecord: 4.2ms | Allocations: 7819)
+
+
