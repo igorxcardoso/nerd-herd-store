@@ -5,8 +5,8 @@ class ProductsController < ApplicationController
     end
 
     def create
-        @product = Product.new(product_params)
-    
+        @product = Product.new(title: params[:product][:title], price: params[:product][:price])
+
         if @product.save
             render json: @product, status: :created
         else
