@@ -1,3 +1,4 @@
+import { AuthService } from './../auth.service';
 import { LoginUser } from './../user-login.model';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -13,7 +14,8 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
 
   constructor(private formbuilder: FormBuilder,
-              private router: Router) { }
+              private router: Router,
+              private login: AuthService) { }
 
   ngOnInit(): void {
     this.loginForm = this.formbuilder.group({
@@ -24,8 +26,7 @@ export class LoginComponent implements OnInit {
 
   submitLogin() {
     var dadosLogin = this.loginForm.getRawValue() as LoginUser; // O 'as LoginUser' é para facilitar a idetificação da var
-    
-    this.router.navigate(['/']);
+    this.login.logar();
   }
 
 }

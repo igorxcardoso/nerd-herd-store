@@ -1,3 +1,4 @@
+import { AuthService } from './components/user/auth.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent { // Passa para o fronts
   nome = 'Igor';
+  showNav: boolean = false;
+
+  constructor(private authService: AuthService) { }
+
+  ngOnInit() {
+    this.authService.showMenuEmitter.subscribe(
+      show => this.showNav = show
+    );
+  }
 }

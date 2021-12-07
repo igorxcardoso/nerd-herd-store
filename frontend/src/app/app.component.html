@@ -1,5 +1,10 @@
-<app-header></app-header>
-<app-nav></app-nav>
-<app-footer></app-footer>
 
+<app-login *ngIf="!showNav"></app-login>
+
+<div *ngIf="showNav">
+    <app-header></app-header>
+    <app-nav></app-nav>
+    <app-footer></app-footer>
+</div>
+    
 <!-- <h1>Olá {{ nome }}</h1> -->
