@@ -8488,3 +8488,2252 @@ Migrating to DeviseTokenAuthCreateUsers (20211206133112)
   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3498293738585800350)[0m
   [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/products" for ::1 at 2021-12-06 10:47:59 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.83ms)
+Completed 200 OK in 27ms (Views: 21.9ms | ActiveRecord: 3.9ms | Allocations: 7891)
+
+
+Started GET "/products/1" for ::1 at 2021-12-06 10:48:01 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:29:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 202 Accepted in 8ms (Views: 1.0ms | ActiveRecord: 0.8ms | Allocations: 1318)
+
+
+Started DELETE "/products/1" for ::1 at 2021-12-06 10:48:02 -0300
+Processing by ProductsController#destroyByid as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+Completed 204 No Content in 9ms (ActiveRecord: 1.7ms | Allocations: 2535)
+
+
+Started GET "/products" for ::1 at 2021-12-06 10:48:02 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.07ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.3ms | Allocations: 2378)
+
+
+Started GET "/products/2" for ::1 at 2021-12-06 10:48:03 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:29:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 202 Accepted in 3ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 871)
+
+
+Started DELETE "/products/2" for ::1 at 2021-12-06 10:48:04 -0300
+Processing by ProductsController#destroyByid as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[36mProduct Destroy (0.9ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+Completed 204 No Content in 7ms (ActiveRecord: 2.2ms | Allocations: 2493)
+
+
+Started GET "/products" for ::1 at 2021-12-06 10:48:04 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.17ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms | Allocations: 2241)
+
+
+Started GET "/products/3" for ::1 at 2021-12-06 10:48:05 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:29:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 202 Accepted in 3ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 852)
+
+
+Started DELETE "/products/3" for ::1 at 2021-12-06 10:48:06 -0300
+Processing by ProductsController#destroyByid as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+Completed 204 No Content in 7ms (ActiveRecord: 2.0ms | Allocations: 2475)
+
+
+Started GET "/products" for ::1 at 2021-12-06 10:48:06 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.56ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.5ms | Allocations: 2104)
+
+
+Started GET "/products/4" for ::1 at 2021-12-06 10:48:07 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:29:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 202 Accepted in 3ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 852)
+
+
+Started DELETE "/products/4" for ::1 at 2021-12-06 10:48:08 -0300
+Processing by ProductsController#destroyByid as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+Completed 204 No Content in 10ms (ActiveRecord: 1.7ms | Allocations: 2476)
+
+
+Started GET "/products" for ::1 at 2021-12-06 10:48:08 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.26ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.4ms | Allocations: 1970)
+
+
+Started GET "/products/5" for ::1 at 2021-12-06 10:48:09 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:29:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 202 Accepted in 9ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 852)
+
+
+Started DELETE "/products/5" for ::1 at 2021-12-06 10:48:10 -0300
+Processing by ProductsController#destroyByid as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+Completed 204 No Content in 24ms (ActiveRecord: 11.1ms | Allocations: 2475)
+
+
+Started GET "/products" for ::1 at 2021-12-06 10:48:10 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.14ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.3ms | Allocations: 1834)
+
+
+Started GET "/products" for ::1 at 2021-12-06 10:48:12 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.13ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.3ms | Allocations: 1834)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:09:33 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.75ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.7ms | Allocations: 1916)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:10:05 -0300
+Processing by ProductsController#show as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.34ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.3ms | Allocations: 1837)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:14:35 -0300
+Processing by ProductsController#show as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.76ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 1836)
+
+
+Started POST "/products" for ::1 at 2021-12-06 11:16:09 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Teste1", "price"=>"222"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 135)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0)):
+  
+app/controllers/products_controller.rb:45:in `product_params'
+app/controllers/products_controller.rb:8:in `create'
+Started POST "/products" for ::1 at 2021-12-06 11:16:21 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Teste1", "price"=>"222"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 138)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0)):
+  
+app/controllers/products_controller.rb:45:in `product_params'
+app/controllers/products_controller.rb:8:in `create'
+Started GET "/products" for ::1 at 2021-12-06 11:16:35 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.15ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.4ms | Allocations: 1881)
+
+
+Started POST "/products" for ::1 at 2021-12-06 11:16:40 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"ee", "price"=>"222"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 130)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0)):
+  
+app/controllers/products_controller.rb:45:in `product_params'
+app/controllers/products_controller.rb:8:in `create'
+Started GET "/products" for ::1 at 2021-12-06 11:16:41 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.62ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.4ms | Allocations: 1833)
+
+
+Started GET "/products/6" for ::1 at 2021-12-06 11:16:43 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:29:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 202 Accepted in 5ms (Views: 1.2ms | ActiveRecord: 1.0ms | Allocations: 888)
+
+
+Started PUT "/products/6" for ::1 at 2021-12-06 11:16:44 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"6", "title"=>"S3 Novo 16GB", "price"=>52.89, "updated_at"=>"2021-12-06T13:25:04.611Z", "product"=>{"id"=>"6", "title"=>"S3 Novo 16GB", "price"=>52.89, "updated_at"=>"2021-12-06T13:25:04.611Z"}}
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:34:in `updateByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.61ms)
+Completed 201 Created in 8ms (Views: 1.5ms | ActiveRecord: 1.5ms | Allocations: 1103)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:16:44 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.75ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1836)
+
+
+Started GET "/products/6" for ::1 at 2021-12-06 11:16:46 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:29:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 202 Accepted in 3ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 852)
+
+
+Started PUT "/products/6" for ::1 at 2021-12-06 11:16:50 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"6", "title"=>"S3 Novo", "price"=>52.89, "updated_at"=>"2021-12-06T13:25:04.611Z", "product"=>{"id"=>"6", "title"=>"S3 Novo", "price"=>52.89, "updated_at"=>"2021-12-06T13:25:04.611Z"}}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:34:in `updateByid'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:36:in `updateByid'
+  [1m[36mProduct Update (1.3ms)[0m  [1m[33mUPDATE "products" SET "title" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["title", "S3 Novo"], ["updated_at", "2021-12-06 14:16:50.475628"], ["id", 6]]
+  ↳ app/controllers/products_controller.rb:36:in `updateByid'
+  [1m[35m (9.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:36:in `updateByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.67ms)
+Completed 201 Created in 26ms (Views: 1.8ms | ActiveRecord: 11.4ms | Allocations: 3224)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:16:50 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (3.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.18ms)
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 3.6ms | Allocations: 1834)
+
+
+Started GET "/products/7" for ::1 at 2021-12-06 11:16:54 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:29:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 202 Accepted in 7ms (Views: 2.0ms | ActiveRecord: 2.0ms | Allocations: 852)
+
+
+Started PUT "/products/7" for ::1 at 2021-12-06 11:16:58 -0300
+Processing by ProductsController#updateByid as HTML
+  Parameters: {"id"=>"7", "title"=>"Garrafa", "price"=>32.9, "updated_at"=>"2021-12-06T13:25:04.619Z", "product"=>{"id"=>"7", "title"=>"Garrafa", "price"=>32.9, "updated_at"=>"2021-12-06T13:25:04.619Z"}}
+  [1m[36mProduct Load (2.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:34:in `updateByid'
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:36:in `updateByid'
+  [1m[36mProduct Update (1.9ms)[0m  [1m[33mUPDATE "products" SET "title" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["title", "Garrafa"], ["updated_at", "2021-12-06 14:16:58.780584"], ["id", 7]]
+  ↳ app/controllers/products_controller.rb:36:in `updateByid'
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:36:in `updateByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 40ms (Views: 1.3ms | ActiveRecord: 7.6ms | Allocations: 3172)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:16:58 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.42ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.6ms | Allocations: 1834)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:17:48 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.14ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.5ms | Allocations: 1834)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:17:49 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.97ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.5ms | Allocations: 1834)
+
+
+Started POST "/products" for ::1 at 2021-12-06 11:17:58 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Tets dee", "price"=>"222"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 130)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0)):
+  
+app/controllers/products_controller.rb:45:in `product_params'
+app/controllers/products_controller.rb:8:in `create'
+Started POST "/products" for ::1 at 2021-12-06 11:17:59 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Tets dee", "price"=>"222"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 132)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0)):
+  
+app/controllers/products_controller.rb:45:in `product_params'
+app/controllers/products_controller.rb:8:in `create'
+Started POST "/products" for ::1 at 2021-12-06 11:17:59 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Tets dee", "price"=>"222"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 130)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0)):
+  
+app/controllers/products_controller.rb:45:in `product_params'
+app/controllers/products_controller.rb:8:in `create'
+Started POST "/products" for ::1 at 2021-12-06 11:19:13 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"www", "price"=>"11"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 130)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0)):
+  
+app/controllers/products_controller.rb:45:in `product_params'
+app/controllers/products_controller.rb:8:in `create'
+Started POST "/products" for ::1 at 2021-12-06 11:19:58 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"www", "price"=>"11"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 177)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0)):
+  
+app/controllers/products_controller.rb:46:in `product_params'
+app/controllers/products_controller.rb:8:in `create'
+Started POST "/products" for ::1 at 2021-12-06 11:20:10 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"", "price"=>""}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 130)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0)):
+  
+app/controllers/products_controller.rb:46:in `product_params'
+app/controllers/products_controller.rb:8:in `create'
+Started POST "/products" for ::1 at 2021-12-06 11:20:11 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"", "price"=>""}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 130)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0)):
+  
+app/controllers/products_controller.rb:46:in `product_params'
+app/controllers/products_controller.rb:8:in `create'
+Started POST "/products" for ::1 at 2021-12-06 11:20:14 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"qqq", "price"=>""}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 130)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0)):
+  
+app/controllers/products_controller.rb:46:in `product_params'
+app/controllers/products_controller.rb:8:in `create'
+Started POST "/products" for ::1 at 2021-12-06 11:20:17 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"qqq", "price"=>"1111111111111.22"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 130)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0)):
+  
+app/controllers/products_controller.rb:46:in `product_params'
+app/controllers/products_controller.rb:8:in `create'
+Started GET "/products" for ::1 at 2021-12-06 11:20:24 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.17ms)
+Completed 200 OK in 17ms (Views: 10.8ms | ActiveRecord: 5.9ms | Allocations: 5570)
+
+
+Started POST "/products" for ::1 at 2021-12-06 11:20:34 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Teste", "price"=>"11.1"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 130)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0)):
+  
+app/controllers/products_controller.rb:46:in `product_params'
+app/controllers/products_controller.rb:8:in `create'
+Started POST "/products" for ::1 at 2021-12-06 11:21:23 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Teste", "price"=>"11.1"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 176)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0)):
+  
+app/controllers/products_controller.rb:47:in `product_params'
+app/controllers/products_controller.rb:9:in `create'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/products" for ::1 at 2021-12-06 11:22:25 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Teste", "price"=>"11.1"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 176)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0)):
+  
+app/controllers/products_controller.rb:47:in `product_params'
+app/controllers/products_controller.rb:9:in `create'
+Started POST "/products" for ::1 at 2021-12-06 11:22:30 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Teste", "price"=>"11.1"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 88)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:22:30 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.53ms)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 3.1ms | Allocations: 5433)
+
+
+Started POST "/products" for ::1 at 2021-12-06 11:22:42 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Teste", "price"=>"2222.1"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 41)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:22:43 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.68ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1834)
+
+
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "teste"], ["price", 22.1], ["created_at", "2021-12-06 14:23:39.830780"], ["updated_at", "2021-12-06 14:23:39.830780"]]
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/products" for ::1 at 2021-12-06 11:23:48 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.52ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.5ms | Allocations: 1969)
+
+
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "teste 2"], ["price", 22.1], ["created_at", "2021-12-06 14:24:08.416256"], ["updated_at", "2021-12-06 14:24:08.416256"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/products" for ::1 at 2021-12-06 11:24:12 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.61ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 1.0ms | Allocations: 2104)
+
+
+Started POST "/products" for ::1 at 2021-12-06 11:24:41 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Teste 3", "price"=>"22"}}
+Completed 204 No Content in 97950ms (ActiveRecord: 0.0ms | Allocations: 240827)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:26:19 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.94ms)
+Completed 200 OK in 20ms (Views: 15.5ms | ActiveRecord: 3.4ms | Allocations: 7229)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:26:25 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.25ms)
+Completed 200 OK in 22ms (Views: 15.6ms | ActiveRecord: 4.9ms | Allocations: 5998)
+
+
+Started POST "/products" for ::1 at 2021-12-06 11:26:41 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Teste 3", "price"=>"22"}}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 4.2ms | Allocations: 3430)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/products_controller.rb:8:in `create'
+Started POST "/products" for ::1 at 2021-12-06 11:26:56 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Teste 3", "price"=>"22"}}
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 3.3ms | Allocations: 3484)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/products_controller.rb:8:in `create'
+Started POST "/products" for ::1 at 2021-12-06 11:27:10 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Teste 3", "price"=>"22"}}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.9ms | Allocations: 3448)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/products_controller.rb:8:in `create'
+Started POST "/products" for ::1 at 2021-12-06 11:28:21 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Teste 3", "price"=>"22"}}
+Completed 500 Internal Server Error in 436543ms (ActiveRecord: 6.8ms | Allocations: 12509)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/products_controller.rb:9:in `create'
+Started POST "/products" for ::1 at 2021-12-06 11:35:46 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Teste 3", "price"=>"22"}}
+Started POST "/products" for ::1 at 2021-12-06 11:36:15 -0300
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:12:in `create'
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Teste 3"], ["price", 22.0], ["created_at", "2021-12-06 14:36:16.639062"], ["updated_at", "2021-12-06 14:36:16.639062"]]
+  ↳ app/controllers/products_controller.rb:12:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:12:in `create'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 201 Created in 29957ms (Views: 1.8ms | ActiveRecord: 12.6ms | Allocations: 15814)
+
+
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"www", "price"=>"222"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:10:in `create'
+  [1m[36mProduct Create (0.9ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "www"], ["price", 222.0], ["created_at", "2021-12-06 14:36:16.714819"], ["updated_at", "2021-12-06 14:36:16.714819"]]
+  ↳ app/controllers/products_controller.rb:10:in `create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:10:in `create'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.67ms)
+Completed 201 Created in 23ms (Views: 2.3ms | ActiveRecord: 4.7ms | Allocations: 6182)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:36:16 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.92ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.4ms | Allocations: 2388)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:36:21 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.06ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.8ms | Allocations: 2374)
+
+
+Started GET "/products/15" for ::1 at 2021-12-06 11:36:27 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:29:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 202 Accepted in 4ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 962)
+
+
+Started DELETE "/products/15" for ::1 at 2021-12-06 11:36:28 -0300
+Processing by ProductsController#destroyByid as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[36mProduct Destroy (0.6ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 15]]
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+Completed 204 No Content in 8ms (ActiveRecord: 2.2ms | Allocations: 2476)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:36:28 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.42ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.3ms | Allocations: 2239)
+
+
+Started GET "/products/14" for ::1 at 2021-12-06 11:36:30 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:29:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 202 Accepted in 4ms (Views: 1.2ms | ActiveRecord: 0.5ms | Allocations: 852)
+
+
+Started DELETE "/products/14" for ::1 at 2021-12-06 11:36:31 -0300
+Processing by ProductsController#destroyByid as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 14]]
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+Completed 204 No Content in 6ms (ActiveRecord: 1.4ms | Allocations: 2475)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:36:31 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.37ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 2104)
+
+
+Started GET "/products/12" for ::1 at 2021-12-06 11:36:32 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:29:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 202 Accepted in 5ms (Views: 1.6ms | ActiveRecord: 0.8ms | Allocations: 852)
+
+
+Started DELETE "/products/12" for ::1 at 2021-12-06 11:36:33 -0300
+Processing by ProductsController#destroyByid as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[36mProduct Destroy (0.6ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 12]]
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+Completed 204 No Content in 27ms (ActiveRecord: 11.3ms | Allocations: 2475)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:36:33 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.69ms)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.3ms | Allocations: 1972)
+
+
+Started GET "/products/13" for ::1 at 2021-12-06 11:36:34 -0300
+Processing by ProductsController#findByid as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (1.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:29:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.54ms)
+Completed 202 Accepted in 6ms (Views: 1.4ms | ActiveRecord: 1.9ms | Allocations: 853)
+
+
+Started DELETE "/products/13" for ::1 at 2021-12-06 11:36:36 -0300
+Processing by ProductsController#destroyByid as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 13]]
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:24:in `destroyByid'
+Completed 204 No Content in 14ms (ActiveRecord: 9.3ms | Allocations: 2475)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:36:36 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.22ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 1834)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:38:21 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.5ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.4ms | Allocations: 1834)
+
+
+Started GET "/admin/contents" for ::1 at 2021-12-06 11:38:40 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/admin/contents"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/products" for ::1 at 2021-12-06 11:39:24 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"teste*", "price"=>"21"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:10:in `create'
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "teste*"], ["price", 21.0], ["created_at", "2021-12-06 14:39:24.032814"], ["updated_at", "2021-12-06 14:39:24.032814"]]
+  ↳ app/controllers/products_controller.rb:10:in `create'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:10:in `create'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 201 Created in 13ms (Views: 1.3ms | ActiveRecord: 2.3ms | Allocations: 2585)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:39:24 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.35ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 1969)
+
+
+Started POST "/products" for ::1 at 2021-12-06 11:40:41 -0300
+Processing by ProductsController#create as */*
+  Parameters: {"title"=>"TV LED 32 Full HD IPS", "price"=>21.32, "product"=>{"title"=>"TV LED 32 Full HD IPS", "price"=>21.32}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:10:in `create'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "TV LED 32 Full HD IPS"], ["price", 21.32], ["created_at", "2021-12-06 14:40:41.385238"], ["updated_at", "2021-12-06 14:40:41.385238"]]
+  ↳ app/controllers/products_controller.rb:10:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:10:in `create'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 6ms (Views: 0.9ms | ActiveRecord: 1.0ms | Allocations: 2587)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:40:49 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.56ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.3ms | Allocations: 2104)
+
+
+Started GET "/products/7" for ::1 at 2021-12-06 11:42:25 -0300
+Processing by ProductsController#findByid as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:29:in `findByid'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 202 Accepted in 3ms (Views: 1.3ms | ActiveRecord: 0.4ms | Allocations: 854)
+
+
+Started POST "/auth" for ::1 at 2021-12-06 11:48:16 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.41ms)
+Completed 422 Unprocessable Entity in 388ms (Views: 2.4ms | ActiveRecord: 3.7ms | Allocations: 38576)
+
+
+Started POST "/auth" for ::1 at 2021-12-06 11:51:29 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 422 Unprocessable Entity in 290ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 954)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:51:40 -0300
+Processing by ProductsController#show as */*
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.93ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 1.1ms | Allocations: 2170)
+
+
+Started GET "/products" for ::1 at 2021-12-06 11:55:17 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.77ms)
+Completed 200 OK in 20ms (Views: 15.1ms | ActiveRecord: 3.7ms | Allocations: 6014)
+
+
+Started POST "/auth" for ::1 at 2021-12-06 11:55:24 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 422 Unprocessable Entity in 316ms (Views: 1.0ms | ActiveRecord: 3.2ms | Allocations: 17536)
+
+
+Started POST "/auth" for ::1 at 2021-12-06 11:57:15 -0300
+  
+SyntaxError (/home/igor/Projects/My_Projects/nerd-herd-store/backend-store/app/models/user.rb:9: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+  include DeviseTokenAuth::Concerns::User
+          ^~~~~~~~~~~~~~~):
+  
+app/models/user.rb:9: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/models/user.rb:9: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started POST "/auth" for ::1 at 2021-12-06 11:57:25 -0300
+Started POST "/auth" for ::1 at 2021-12-06 12:00:20 -0300
+Started POST "/auth" for ::1 at 2021-12-06 12:00:20 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 422 Unprocessable Entity in 326ms (Views: 1.2ms | ActiveRecord: 4.2ms | Allocations: 20304)
+
+
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 422 Unprocessable Entity in 305ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 1023)
+
+
+Started POST "/auth" for ::1 at 2021-12-06 12:06:25 -0300
+Started POST "/auth" for ::1 at 2021-12-06 12:06:26 -0300
+Started POST "/auth" for ::1 at 2021-12-06 12:06:26 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  Parameters: {"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+[31mUnpermitted parameter: :registration[0m
+Completed 422 Unprocessable Entity in 603ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 17462)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 422 Unprocessable Entity in 604ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 17864)
+
+
+Started POST "/auth" for ::1 at 2021-12-06 12:12:11 -0300
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 422 Unprocessable Entity in 336ms (Views: 1.3ms | ActiveRecord: 5.2ms | Allocations: 26034)
+
+
+Started POST "/auth" for ::1 at 2021-12-06 12:12:57 -0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "email": "iygorsilva@gmail.com", 
+    "password": "123456", 
+    // "password_confirmation": "123456"
+}
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 130)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (767: unexpected token at '{
+    "email": "iygorsilva@gmail.com", 
+    "password": "123456", 
+    // "password_confirmation": "123456"
+}'):
+  
+actionpack (6.0.4.1) lib/action_dispatch/http/parameters.rb:114:in `rescue in parse_formatted_parameters'
+actionpack (6.0.4.1) lib/action_dispatch/http/parameters.rb:110:in `parse_formatted_parameters'
+actionpack (6.0.4.1) lib/action_dispatch/http/request.rb:391:in `block in POST'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.0.4.1) lib/action_dispatch/http/request.rb:390:in `POST'
+actionpack (6.0.4.1) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.4.1) lib/action_controller/metal/strong_parameters.rb:1099:in `params'
+devise_token_auth (1.2.0) app/controllers/devise_token_auth/registrations_controller.rb:92:in `sign_up_params'
+devise_token_auth (1.2.0) app/controllers/devise_token_auth/registrations_controller.rb:190:in `validate_sign_up_params'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:181:in `block (2 levels) in halting_and_conditional'
+actionpack (6.0.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.4.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.4.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.4.1) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.4.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/auth" for ::1 at 2021-12-06 12:13:03 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 422 Unprocessable Entity in 287ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 961)
+
+
+Started POST "/auth" for ::1 at 2021-12-06 12:15:12 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 422 Unprocessable Entity in 287ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 959)
+
+
+Started POST "/auth" for ::1 at 2021-12-06 12:15:24 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 422 Unprocessable Entity in 356ms (Views: 1.1ms | ActiveRecord: 3.6ms | Allocations: 26034)
+
+
+Started POST "/auth" for ::1 at 2021-12-06 12:15:34 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 422 Unprocessable Entity in 279ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 961)
+
+
+Started POST "/auth" for ::1 at 2021-12-06 12:15:45 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 422 Unprocessable Entity in 287ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 959)
+
+
+Started POST "/auth" for ::1 at 2021-12-06 12:17:34 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 422 Unprocessable Entity in 281ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 951)
+
+
+Started POST "/auth" for ::1 at 2021-12-06 12:17:46 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 422 Unprocessable Entity in 336ms (Views: 1.7ms | ActiveRecord: 3.6ms | Allocations: 26035)
+
+
+Started POST "/auth" for ::1 at 2021-12-06 12:17:57 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 422 Unprocessable Entity in 280ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 962)
+
+
+  [1m[36mUser Load (47.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND "users"."provider" = $2 LIMIT $3[0m  [["email", "iygorsilva@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "confirmation_token", "confirmation_sent_at", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["uid", "iygorsilva@gmail.com"], ["encrypted_password", "$2a$12$dnEe1uVcqergKNhImkaYCuJQcLj.sX/N3clL6P2b2a.BoekpWAzEy"], ["confirmation_token", "T5T2xYJTx8snznujtkDx"], ["confirmation_sent_at", "2021-12-06 15:19:37.580212"], ["email", "iygorsilva@gmail.com"], ["created_at", "2021-12-06 15:19:37.580080"], ["updated_at", "2021-12-06 15:19:37.580080"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/auth" for ::1 at 2021-12-06 12:21:10 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"confirm_success_url"=>"/", "email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"confirm_success_url"=>"/", "email"=>"iygorsilva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :confirm_success_url, :registration[0m
+[31mUnpermitted parameters: :confirm_success_url, :registration[0m
+[31mUnpermitted parameters: :confirm_success_url, :registration[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND "users"."provider" = $2 LIMIT $3[0m  [["email", "iygorsilva@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 422 Unprocessable Entity in 322ms (Views: 0.8ms | ActiveRecord: 3.7ms | Allocations: 7966)
+
+
+Started POST "/auth" for ::1 at 2021-12-06 12:21:41 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"confirm_success_url"=>"/", "email"=>"teste@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"confirm_success_url"=>"/", "email"=>"teste@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :confirm_success_url, :registration[0m
+[31mUnpermitted parameters: :confirm_success_url, :registration[0m
+[31mUnpermitted parameters: :confirm_success_url, :registration[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND "users"."provider" = $2 LIMIT $3[0m  [["email", "teste@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "confirmation_token", "confirmation_sent_at", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["uid", "teste@gmail.com"], ["encrypted_password", "$2a$12$GxlDZyR4QuEWZNSSANIqQuxhmbG63n8KZZgfjcHjlulhpVeF282JC"], ["confirmation_token", "GK1uGA-5sp2bR7_ZNkp3"], ["confirmation_sent_at", "2021-12-06 15:21:41.791922"], ["email", "teste@gmail.com"], ["created_at", "2021-12-06 15:21:41.791825"], ["updated_at", "2021-12-06 15:21:41.791825"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering /home/igor/.rvm/gems/ruby-2.6.3/gems/devise_token_auth-1.2.0/app/views/devise/mailer/confirmation_instructions.html.erb
+  Rendered /home/igor/.rvm/gems/ruby-2.6.3/gems/devise_token_auth-1.2.0/app/views/devise/mailer/confirmation_instructions.html.erb (Duration: 4.9ms | Allocations: 1031)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 20.2ms
+Delivered mail 61ae2a85f32d3_18212ac9267ba18c47353@igorxcardoso.mail (36.8ms)
+Date: Mon, 06 Dec 2021 12:21:41 -0300
+From: suporte@nerdherdstore.com
+Reply-To: suporte@nerdherdstore.com
+To: teste@gmail.com
+Message-ID: <61ae2a85f32d3_18212ac9267ba18c47353@igorxcardoso.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+client-config: default
+redirect-url: /
+
+<p>Welcome teste@gmail.com!</p>
+
+<p>You can confirm your account email through the link below: </p>
+
+<p><a href="http://localhost:3000/auth/confirmation?config=default&confirmation_token=GK1uGA-5sp2bR7_ZNkp3&redirect_url=%2F">Confirm my account</a></p>
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 534ms (Views: 1.4ms | ActiveRecord: 1.8ms | Allocations: 63893)
+
+
+Started POST "/auth" for ::1 at 2021-12-06 13:54:23 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"confirm_success_url"=>"/", "name"=>"admin", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "admin"=>true, "registration"=>{"confirm_success_url"=>"/", "name"=>"admin", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "admin"=>true}}
+[31mUnpermitted parameters: :confirm_success_url, :name, :admin, :registration[0m
+[31mUnpermitted parameters: :confirm_success_url, :name, :admin, :registration[0m
+[31mUnpermitted parameters: :confirm_success_url, :name, :admin, :registration[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND "users"."provider" = $2 LIMIT $3[0m  [["email", "admin@admin.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 422 Unprocessable Entity in 255ms (Views: 0.7ms | ActiveRecord: 1.9ms | Allocations: 5660)
+
+
+Started POST "/auth" for ::1 at 2021-12-06 13:54:40 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"confirm_success_url"=>"/", "name"=>"admin", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "admin"=>true, "registration"=>{"confirm_success_url"=>"/", "name"=>"admin", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "admin"=>true}}
+[31mUnpermitted parameters: :confirm_success_url, :name, :admin, :registration[0m
+[31mUnpermitted parameters: :confirm_success_url, :name, :admin, :registration[0m
+[31mUnpermitted parameters: :confirm_success_url, :name, :admin, :registration[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND "users"."provider" = $2 LIMIT $3[0m  [["email", "admin@admin.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "confirmation_token", "confirmation_sent_at", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["uid", "admin@admin.com"], ["encrypted_password", "$2a$12$5OoEKPskg9wcRcjZiuN6u.DspTFbwxdhSAI42KTroAvtqsenMO8gq"], ["confirmation_token", "5cRT8PKeRixcLCXRzq29"], ["confirmation_sent_at", "2021-12-06 16:54:40.429971"], ["email", "admin@admin.com"], ["created_at", "2021-12-06 16:54:40.429858"], ["updated_at", "2021-12-06 16:54:40.429858"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering /home/igor/.rvm/gems/ruby-2.6.3/gems/devise_token_auth-1.2.0/app/views/devise/mailer/confirmation_instructions.html.erb
+  Rendered /home/igor/.rvm/gems/ruby-2.6.3/gems/devise_token_auth-1.2.0/app/views/devise/mailer/confirmation_instructions.html.erb (Duration: 0.4ms | Allocations: 208)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 1.4ms
+Delivered mail 61ae40506a7a2_18212ac9267ba4ac47483@igorxcardoso.mail (10.5ms)
+Date: Mon, 06 Dec 2021 13:54:40 -0300
+From: suporte@nerdherdstore.com
+Reply-To: suporte@nerdherdstore.com
+To: admin@admin.com
+Message-ID: <61ae40506a7a2_18212ac9267ba4ac47483@igorxcardoso.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+client-config: default
+redirect-url: /
+
+<p>Welcome admin@admin.com!</p>
+
+<p>You can confirm your account email through the link below: </p>
+
+<p><a href="http://localhost:3000/auth/confirmation?config=default&confirmation_token=5cRT8PKeRixcLCXRzq29&redirect_url=%2F">Confirm my account</a></p>
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 272ms (Views: 0.9ms | ActiveRecord: 1.7ms | Allocations: 12441)
+
+
+Started POST "/sign_in" for ::1 at 2021-12-06 14:58:33 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/sign_in"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "email": "admin@admin.com", 
+    "password": "12345678", 
+}
+Started POST "/sign_in" for ::1 at 2021-12-06 14:58:50 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/sign_in"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/auth/sign_in" for ::1 at 2021-12-06 14:59:22 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"admin@admin.com", "password"=>"[FILTERED]", "session"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "admin@admin.com"], ["provider", "email"], ["LIMIT", 1]]
+[31mUnpermitted parameter: :session[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 401 Unauthorized in 90ms (Views: 1.2ms | ActiveRecord: 7.0ms | Allocations: 28802)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Destroy (8.5ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/auth" for ::1 at 2021-12-06 15:02:12 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"confirm_success_url"=>"/", "name"=>"admin", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "admin"=>true, "registration"=>{"confirm_success_url"=>"/", "name"=>"admin", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "admin"=>true}}
+[31mUnpermitted parameters: :confirm_success_url, :name, :admin, :registration[0m
+[31mUnpermitted parameters: :confirm_success_url, :name, :admin, :registration[0m
+[31mUnpermitted parameters: :confirm_success_url, :name, :admin, :registration[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND "users"."provider" = $2 LIMIT $3[0m  [["email", "admin@admin.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "confirmation_token", "confirmation_sent_at", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["uid", "admin@admin.com"], ["encrypted_password", "$2a$12$5F7W19Pz9VGvlL1wCwAVlOvvh.sXaIgNhQvRW/lnv062S0lkLJ9LK"], ["confirmation_token", "2u6RsZjA7jJJ1oponQdq"], ["confirmation_sent_at", "2021-12-06 18:02:12.593943"], ["email", "admin@admin.com"], ["created_at", "2021-12-06 18:02:12.593838"], ["updated_at", "2021-12-06 18:02:12.593838"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering /home/igor/.rvm/gems/ruby-2.6.3/gems/devise_token_auth-1.2.0/app/views/devise/mailer/confirmation_instructions.html.erb
+  Rendered /home/igor/.rvm/gems/ruby-2.6.3/gems/devise_token_auth-1.2.0/app/views/devise/mailer/confirmation_instructions.html.erb (Duration: 5.5ms | Allocations: 775)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 19.3ms
+Delivered mail 61ae5024ae8f4_68c62b21d468c9ac26025@igorxcardoso.mail (25.5ms)
+Date: Mon, 06 Dec 2021 15:02:12 -0300
+From: suporte@nerdherdstore.com
+Reply-To: suporte@nerdherdstore.com
+To: admin@admin.com
+Message-ID: <61ae5024ae8f4_68c62b21d468c9ac26025@igorxcardoso.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+client-config: default
+redirect-url: /
+
+<p>Welcome admin@admin.com!</p>
+
+<p>You can confirm your account email through the link below: </p>
+
+<p><a href="http://localhost:3000/auth/confirmation?config=default&confirmation_token=2u6RsZjA7jJJ1oponQdq&redirect_url=%2F">Confirm my account</a></p>
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 461ms (Views: 1.5ms | ActiveRecord: 3.1ms | Allocations: 42198)
+
+
+Started GET "/auth/confirmation?config=default&confirmation_token=2u6RsZjA7jJJ1oponQdq&redirect_url=%2F" for ::1 at 2021-12-06 15:02:14 -0300
+Processing by DeviseTokenAuth::ConfirmationsController#show as HTML
+  Parameters: {"config"=>"default", "confirmation_token"=>"2u6RsZjA7jJJ1oponQdq", "redirect_url"=>"/"}
+[31mUnpermitted parameters: :config, :redirect_url[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."confirmation_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["confirmation_token", "2u6RsZjA7jJJ1oponQdq"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "confirmed_at" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["confirmed_at", "2021-12-06 18:02:14.847052"], ["updated_at", "2021-12-06 18:02:14.848133"], ["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000:///?account_confirmation_success=true
+Completed 302 Found in 21ms (ActiveRecord: 2.5ms | Allocations: 5954)
+
+
+Started GET "/auth/confirmation?config=default&confirmation_token=2u6RsZjA7jJJ1oponQdq&redirect_url=%2F" for ::1 at 2021-12-06 15:02:15 -0300
+Processing by DeviseTokenAuth::ConfirmationsController#show as HTML
+  Parameters: {"config"=>"default", "confirmation_token"=>"2u6RsZjA7jJJ1oponQdq", "redirect_url"=>"/"}
+[31mUnpermitted parameters: :config, :redirect_url[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."confirmation_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["confirmation_token", "2u6RsZjA7jJJ1oponQdq"], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.6ms | Allocations: 1961)
+
+
+  
+ActionController::RoutingError (Not Found):
+  
+devise_token_auth (1.2.0) app/controllers/devise_token_auth/confirmations_controller.rb:29:in `show'
+actionpack (6.0.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.4.1) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.4.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.4.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.4.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.4.1) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.4.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/auth/sign_in" for ::1 at 2021-12-06 15:03:04 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"admin@admin.com", "password"=>"[FILTERED]", "session"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "admin@admin.com"], ["provider", "email"], ["LIMIT", 1]]
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"xHYOopGx5d5-L0HeZSYIsg\\\":{\\\"token\\\":\\\"$2a$10$CxzoXzXCkhHyalGtMAbv3eHt72Leqhn23I5b6Tgj2fRT4QjRYxDnq\\\",\\\"expiry\\\":1640023384}}\""], ["updated_at", "2021-12-06 18:03:04.529546"], ["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2021-12-06 18:03:04.535595"], ["last_sign_in_at", "2021-12-06 18:03:04.535595"], ["current_sign_in_ip", "::1/128"], ["last_sign_in_ip", "::1/128"], ["updated_at", "2021-12-06 18:03:04.535936"], ["id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.41ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 405ms (Views: 1.0ms | ActiveRecord: 3.3ms | Allocations: 11943)
+
+
+Started POST "/auth/sign_in" for ::1 at 2021-12-06 15:04:26 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"admin@admin.com", "password"=>"[FILTERED]", "session"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "admin@admin.com"], ["provider", "email"], ["LIMIT", 1]]
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"xHYOopGx5d5-L0HeZSYIsg\\\":{\\\"token\\\":\\\"$2a$10$CxzoXzXCkhHyalGtMAbv3eHt72Leqhn23I5b6Tgj2fRT4QjRYxDnq\\\",\\\"expiry\\\":1640023384},\\\"JND_0goHG8khUvK3oAgFFQ\\\":{\\\"token\\\":\\\"$2a$10$VF2L3tqhDpNw1dhcDyyXdu3.QkxKaobWxUzgLzG4tvUKPMUuVUvga\\\",\\\"expiry\\\":1640023467}}\""], ["updated_at", "2021-12-06 18:04:27.313280"], ["id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["sign_in_count", 2], ["current_sign_in_at", "2021-12-06 18:04:27.318524"], ["updated_at", "2021-12-06 18:04:27.318908"], ["id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 375ms (Views: 0.5ms | ActiveRecord: 2.6ms | Allocations: 11998)
+
+
+Started GET "/auth/validate_token" for ::1 at 2021-12-06 15:14:57 -0300
+Processing by DeviseTokenAuth::TokenValidationsController#validate_token as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "admin@admin.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 79ms (Views: 0.7ms | ActiveRecord: 1.0ms | Allocations: 3461)
+
+
+Started DELETE "/auth/sign_out" for ::1 at 2021-12-06 15:21:09 -0300
+Processing by DeviseTokenAuth::SessionsController#destroy as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 404 Not Found in 8ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 2587)
+
+
+Started GET "/admin/courses" for ::1 at 2021-12-06 15:58:58 -0300
+  [1m[35m (8.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/admin/courses"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/admin/courses" for ::1 at 2021-12-06 15:58:59 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/admin/courses"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/admin/courses" for ::1 at 2021-12-06 15:59:00 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/admin/courses"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/admin/courses" for ::1 at 2021-12-06 15:59:01 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/admin/courses"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/admin/courses" for ::1 at 2021-12-06 15:59:02 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/admin/courses"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/admin/courses" for ::1 at 2021-12-06 15:59:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/admin/courses"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/admin/courses" for ::1 at 2021-12-06 15:59:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/admin/courses"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/admin/courses" for ::1 at 2021-12-06 15:59:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/admin/courses"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/admin" for ::1 at 2021-12-06 15:59:06 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/admin"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started DELETE "/auth/sign_out" for ::1 at 2021-12-06 17:11:25 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DeviseTokenAuth::SessionsController#destroy as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 404 Not Found in 21ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 7910)
+
+
+Started POST "/auth/sign_in" for ::1 at 2021-12-06 17:11:33 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"admin@admin.com", "password"=>"[FILTERED]", "session"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "admin@admin.com"], ["provider", "email"], ["LIMIT", 1]]
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"xHYOopGx5d5-L0HeZSYIsg\\\":{\\\"token\\\":\\\"$2a$10$CxzoXzXCkhHyalGtMAbv3eHt72Leqhn23I5b6Tgj2fRT4QjRYxDnq\\\",\\\"expiry\\\":1640023384},\\\"JND_0goHG8khUvK3oAgFFQ\\\":{\\\"token\\\":\\\"$2a$10$VF2L3tqhDpNw1dhcDyyXdu3.QkxKaobWxUzgLzG4tvUKPMUuVUvga\\\",\\\"expiry\\\":1640023467},\\\"R56NcooAcpuOni5OV5K6FQ\\\":{\\\"token\\\":\\\"$2a$10$EtHHVMWSGZQPU0jpvOK4FePh6a0Ggqb25OWflTLApUVRLtln6Buq.\\\",\\\"expiry\\\":1640031094}}\""], ["updated_at", "2021-12-06 20:11:34.208872"], ["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 3], ["current_sign_in_at", "2021-12-06 20:11:34.213776"], ["last_sign_in_at", "2021-12-06 18:04:27.318524"], ["updated_at", "2021-12-06 20:11:34.214136"], ["id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 361ms (Views: 0.4ms | ActiveRecord: 6.2ms | Allocations: 31149)
+
+
+Started GET "/auth/validate_token" for ::1 at 2021-12-06 17:11:40 -0300
+Processing by DeviseTokenAuth::TokenValidationsController#validate_token as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "admin@admin.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 3326)
+
+
+Started DELETE "/auth/sign_out" for ::1 at 2021-12-06 17:11:47 -0300
+Processing by DeviseTokenAuth::SessionsController#destroy as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 404 Not Found in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 274)
+
+
+Started DELETE "/auth/sign_out" for ::1 at 2021-12-06 17:12:39 -0300
+Processing by DeviseTokenAuth::SessionsController#destroy as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"xHYOopGx5d5-L0HeZSYIsg\\\":{\\\"token\\\":\\\"$2a$10$CxzoXzXCkhHyalGtMAbv3eHt72Leqhn23I5b6Tgj2fRT4QjRYxDnq\\\",\\\"expiry\\\":1640023384},\\\"R56NcooAcpuOni5OV5K6FQ\\\":{\\\"token\\\":\\\"$2a$10$EtHHVMWSGZQPU0jpvOK4FePh6a0Ggqb25OWflTLApUVRLtln6Buq.\\\",\\\"expiry\\\":1640031094}}\""], ["updated_at", "2021-12-06 20:12:39.020793"], ["id", 4]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "admin@admin.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 23ms (Views: 4.6ms | ActiveRecord: 3.0ms | Allocations: 6854)
+
+
+Started POST "/auth/sign_in" for ::1 at 2021-12-06 17:13:15 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"admin@admin.com", "password"=>"[FILTERED]", "session"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "admin@admin.com"], ["provider", "email"], ["LIMIT", 1]]
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"xHYOopGx5d5-L0HeZSYIsg\\\":{\\\"token\\\":\\\"$2a$10$CxzoXzXCkhHyalGtMAbv3eHt72Leqhn23I5b6Tgj2fRT4QjRYxDnq\\\",\\\"expiry\\\":1640023384},\\\"R56NcooAcpuOni5OV5K6FQ\\\":{\\\"token\\\":\\\"$2a$10$EtHHVMWSGZQPU0jpvOK4FePh6a0Ggqb25OWflTLApUVRLtln6Buq.\\\",\\\"expiry\\\":1640031094},\\\"dzphrdeiRKcbM3dRqUHosA\\\":{\\\"token\\\":\\\"$2a$10$/UVoyg7wWAb/guB2wXVn6.d7hxnOnBeLmFptqS05Aklg7AugMHEZu\\\",\\\"expiry\\\":1640031196}}\""], ["updated_at", "2021-12-06 20:13:16.305186"], ["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 4], ["current_sign_in_at", "2021-12-06 20:13:16.313400"], ["last_sign_in_at", "2021-12-06 20:11:34.213776"], ["updated_at", "2021-12-06 20:13:16.314414"], ["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 335ms (Views: 0.5ms | ActiveRecord: 2.8ms | Allocations: 12216)
+
+
+Started GET "/auth/validate_token" for ::1 at 2021-12-06 17:13:20 -0300
+Processing by DeviseTokenAuth::TokenValidationsController#validate_token as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "admin@admin.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 4ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 2603)
+
+
+Started POST "/auth/sign_in" for ::1 at 2021-12-06 17:13:26 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"admin@admin.com", "password"=>"[FILTERED]", "session"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "admin@admin.com"], ["provider", "email"], ["LIMIT", 1]]
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"xHYOopGx5d5-L0HeZSYIsg\\\":{\\\"token\\\":\\\"$2a$10$CxzoXzXCkhHyalGtMAbv3eHt72Leqhn23I5b6Tgj2fRT4QjRYxDnq\\\",\\\"expiry\\\":1640023384},\\\"R56NcooAcpuOni5OV5K6FQ\\\":{\\\"token\\\":\\\"$2a$10$EtHHVMWSGZQPU0jpvOK4FePh6a0Ggqb25OWflTLApUVRLtln6Buq.\\\",\\\"expiry\\\":1640031094},\\\"dzphrdeiRKcbM3dRqUHosA\\\":{\\\"token\\\":\\\"$2a$10$/UVoyg7wWAb/guB2wXVn6.d7hxnOnBeLmFptqS05Aklg7AugMHEZu\\\",\\\"expiry\\\":1640031196},\\\"AKbkLWe9tzWs7ZRqIZ1HJg\\\":{\\\"token\\\":\\\"$2a$10$rU6TshtD.Y6.89aUxbKCrODY7c9sEq5VUnHn.qgb4l3j5G1oZ0L.O\\\",\\\"expiry\\\":1640031206}}\""], ["updated_at", "2021-12-06 20:13:26.331386"], ["id", 4]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 5], ["current_sign_in_at", "2021-12-06 20:13:26.336790"], ["last_sign_in_at", "2021-12-06 20:13:16.313400"], ["updated_at", "2021-12-06 20:13:26.337516"], ["id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 331ms (Views: 0.8ms | ActiveRecord: 3.3ms | Allocations: 12341)
+
+
+Started GET "/auth/validate_token" for ::1 at 2021-12-06 17:13:47 -0300
+Processing by DeviseTokenAuth::TokenValidationsController#validate_token as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "admin@admin.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 401 Unauthorized in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 2608)
+
+
+Started POST "/auth/sign_in" for ::1 at 2021-12-06 17:13:58 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"admin@admin.com", "password"=>"[FILTERED]", "session"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "admin@admin.com"], ["provider", "email"], ["LIMIT", 1]]
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"xHYOopGx5d5-L0HeZSYIsg\\\":{\\\"token\\\":\\\"$2a$10$CxzoXzXCkhHyalGtMAbv3eHt72Leqhn23I5b6Tgj2fRT4QjRYxDnq\\\",\\\"expiry\\\":1640023384},\\\"R56NcooAcpuOni5OV5K6FQ\\\":{\\\"token\\\":\\\"$2a$10$EtHHVMWSGZQPU0jpvOK4FePh6a0Ggqb25OWflTLApUVRLtln6Buq.\\\",\\\"expiry\\\":1640031094},\\\"dzphrdeiRKcbM3dRqUHosA\\\":{\\\"token\\\":\\\"$2a$10$/UVoyg7wWAb/guB2wXVn6.d7hxnOnBeLmFptqS05Aklg7AugMHEZu\\\",\\\"expiry\\\":1640031196},\\\"AKbkLWe9tzWs7ZRqIZ1HJg\\\":{\\\"token\\\":\\\"$2a$10$rU6TshtD.Y6.89aUxbKCrODY7c9sEq5VUnHn.qgb4l3j5G1oZ0L.O\\\",\\\"expiry\\\":1640031206},\\\"Dq76_nL9T4ESdg1CWt-lNA\\\":{\\\"token\\\":\\\"$2a$10$k88RIjZ4HIxYbmF39DuV9O.anFLTRNHhadiP0HsF97CfBr0eLC7rW\\\",\\\"expiry\\\":1640031238}}\""], ["updated_at", "2021-12-06 20:13:58.378027"], ["id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 6], ["current_sign_in_at", "2021-12-06 20:13:58.382466"], ["last_sign_in_at", "2021-12-06 20:13:26.336790"], ["updated_at", "2021-12-06 20:13:58.382833"], ["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 321ms (Views: 0.4ms | ActiveRecord: 2.8ms | Allocations: 12493)
+
+
+Started GET "/auth/validate_token" for ::1 at 2021-12-06 17:14:55 -0300
+Processing by DeviseTokenAuth::TokenValidationsController#validate_token as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "admin@admin.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 3147)
+
+
+Started POST "/auth" for ::1 at 2021-12-06 17:15:56 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"confirm_success_url"=>"/", "name"=>"igor", "email"=>"igor@user.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "admin"=>true, "registration"=>{"confirm_success_url"=>"/", "name"=>"igor", "email"=>"igor@user.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "admin"=>true}}
+[31mUnpermitted parameters: :confirm_success_url, :name, :admin, :registration[0m
+[31mUnpermitted parameters: :confirm_success_url, :name, :admin, :registration[0m
+[31mUnpermitted parameters: :confirm_success_url, :name, :admin, :registration[0m
+Completed 500 Internal Server Error in 248ms (ActiveRecord: 0.0ms | Allocations: 1648)
+
+
+  
+NoMethodError (undefined method `find' for "http://localhost:4200/reset-password":String):
+  
+devise_token_auth (1.2.0) lib/devise_token_auth/url.rb:23:in `whitelisted?'
+devise_token_auth (1.2.0) app/controllers/devise_token_auth/application_controller.rb:20:in `blacklisted_redirect_url?'
+devise_token_auth (1.2.0) app/controllers/devise_token_auth/registrations_controller.rb:31:in `create'
+actionpack (6.0.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.4.1) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.4.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.4.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.4.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.4.1) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.4.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/auth" for ::1 at 2021-12-06 17:16:28 -0300
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"confirm_success_url"=>"/", "email"=>"igor@user.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"confirm_success_url"=>"/", "email"=>"igor@user.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :confirm_success_url, :registration[0m
+[31mUnpermitted parameters: :confirm_success_url, :registration[0m
+[31mUnpermitted parameters: :confirm_success_url, :registration[0m
+Completed 500 Internal Server Error in 247ms (ActiveRecord: 0.0ms | Allocations: 1503)
+
+
+  
+NoMethodError (undefined method `find' for "http://localhost:4200/reset-password":String):
+  
+devise_token_auth (1.2.0) lib/devise_token_auth/url.rb:23:in `whitelisted?'
+devise_token_auth (1.2.0) app/controllers/devise_token_auth/application_controller.rb:20:in `blacklisted_redirect_url?'
+devise_token_auth (1.2.0) app/controllers/devise_token_auth/registrations_controller.rb:31:in `create'
+actionpack (6.0.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.4.1) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.4.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.4.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.4.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.4.1) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (6.0.4.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.4.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/products" for ::1 at 2021-12-07 11:58:20 -0300
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.04ms)
+Completed 200 OK in 34ms (Views: 23.9ms | ActiveRecord: 7.8ms | Allocations: 7485)
+
+
+Started GET "/products" for ::1 at 2021-12-07 11:58:21 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.92ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.2ms | Allocations: 2124)
+
+
+Started GET "/admin/classrooms" for ::1 at 2021-12-07 13:21:14 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/admin/classrooms"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/admin/classrooms/5/edit" for ::1 at 2021-12-07 13:21:20 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/admin/classrooms/5/edit"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-12-07 13:21:49 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/igor/.rvm/gems/ruby-2.6.3/gems/railties-6.0.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/igor/.rvm/gems/ruby-2.6.3/gems/railties-6.0.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.3ms | Allocations: 314)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 1588)
+
+
+Started GET "/products" for ::1 at 2021-12-07 13:22:10 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.34ms)
+Completed 200 OK in 27ms (Views: 19.1ms | ActiveRecord: 5.0ms | Allocations: 7495)
+
+
+Started GET "/products" for ::1 at 2021-12-07 13:22:38 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.42ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.4ms | Allocations: 2124)
+
+
+Started GET "/" for ::1 at 2021-12-07 13:22:55 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/igor/.rvm/gems/ruby-2.6.3/gems/railties-6.0.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/igor/.rvm/gems/ruby-2.6.3/gems/railties-6.0.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.2ms | Allocations: 190)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 721)
+
+
+Started GET "/products" for ::1 at 2021-12-07 13:25:23 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.15ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.4ms | Allocations: 2104)
+
+
+Started GET "/products" for ::1 at 2021-12-07 13:50:52 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.34ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.0ms | Allocations: 2200)
+
+
+Started GET "/products" for ::1 at 2021-12-07 13:52:24 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.44ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 2105)
+
+
+Started GET "/products" for ::1 at 2021-12-07 13:56:39 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.92ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.4ms | Allocations: 2104)
+
+
+Started GET "/products" for ::1 at 2021-12-07 14:24:40 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.42ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.6ms | Allocations: 2186)
+
+
+Started GET "/products" for ::1 at 2021-12-07 14:26:42 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.2ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.3ms | Allocations: 2104)
+
+
+Started GET "/products" for ::1 at 2021-12-07 14:35:06 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.67ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.8ms | Allocations: 2200)
+
+
+Started GET "/products" for ::1 at 2021-12-07 14:35:07 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.45ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.7ms | Allocations: 2104)
+
+
+Started GET "/products" for ::1 at 2021-12-07 14:35:53 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.93ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.3ms | Allocations: 2104)
+
+
+Started GET "/products" for ::1 at 2021-12-07 14:36:04 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.24ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.4ms | Allocations: 2104)
+
+
+Started GET "/products" for ::1 at 2021-12-07 14:38:18 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.6ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 1.3ms | Allocations: 2104)
+
+
+Started GET "/products" for ::1 at 2021-12-07 14:40:47 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.63ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.8ms | Allocations: 2104)
+
+
+Started GET "/products" for ::1 at 2021-12-07 14:40:49 -0300
+Processing by ProductsController#show as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.57ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.3ms | Allocations: 2104)
+
+
+Started POST "/auth/sign_in" for ::1 at 2021-12-07 15:06:43 -0300
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"admin@admin.com", "password"=>"[FILTERED]", "session"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "admin@admin.com"], ["provider", "email"], ["LIMIT", 1]]
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (1.5ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"xHYOopGx5d5-L0HeZSYIsg\\\":{\\\"token\\\":\\\"$2a$10$CxzoXzXCkhHyalGtMAbv3eHt72Leqhn23I5b6Tgj2fRT4QjRYxDnq\\\",\\\"expiry\\\":1640023384},\\\"R56NcooAcpuOni5OV5K6FQ\\\":{\\\"token\\\":\\\"$2a$10$EtHHVMWSGZQPU0jpvOK4FePh6a0Ggqb25OWflTLApUVRLtln6Buq.\\\",\\\"expiry\\\":1640031094},\\\"dzphrdeiRKcbM3dRqUHosA\\\":{\\\"token\\\":\\\"$2a$10$/UVoyg7wWAb/guB2wXVn6.d7hxnOnBeLmFptqS05Aklg7AugMHEZu\\\",\\\"expiry\\\":1640031196},\\\"AKbkLWe9tzWs7ZRqIZ1HJg\\\":{\\\"token\\\":\\\"$2a$10$rU6TshtD.Y6.89aUxbKCrODY7c9sEq5VUnHn.qgb4l3j5G1oZ0L.O\\\",\\\"expiry\\\":1640031206},\\\"Dq76_nL9T4ESdg1CWt-lNA\\\":{\\\"token\\\":\\\"$2a$10$k88RIjZ4HIxYbmF39DuV9O.anFLTRNHhadiP0HsF97CfBr0eLC7rW\\\",\\\"expiry\\\":1640031238},\\\"6AMfUj-KdYqaSj5PExaqiQ\\\":{\\\"token\\\":\\\"$2a$10$eDptZIFjCfULbqBXFQUb8e0rVDR.jub7T3g3bdMb.DzVlVHUPN1iW\\\",\\\"expiry\\\":1640110003}}\""], ["updated_at", "2021-12-07 18:06:43.994725"], ["id", 4]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 7], ["current_sign_in_at", "2021-12-07 18:06:44.003168"], ["last_sign_in_at", "2021-12-06 20:13:58.382466"], ["updated_at", "2021-12-07 18:06:44.003807"], ["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 432ms (Views: 1.9ms | ActiveRecord: 13.5ms | Allocations: 31849)
+
+
